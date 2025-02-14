@@ -14,12 +14,13 @@ const requestOvertime = async (req, res) => {
 
     try {
         // Convert the input time from 12-hour format to 24-hour format
+        const formattedRequestDate = moment(request_date, "DD-MMMM-YYYY").format("YYYY-MM-DD");
         const formattedStartTime = moment(start_time, "hh:mm A").format("HH:mm:ss");
         const formattedEndTime = moment(end_time, "hh:mm A").format("HH:mm:ss");
 
         // Insert the converted time into the database
         const sql = `INSERT INTO tbl_overtime (user_id, request_date, reason, start_time, end_time) VALUES (?, ?, ?, ?, ?)`;
-        const [result] = await con.query(sql, [user_id, request_date, reason, formattedStartTime, formattedEndTime]);
+        const [result] = await con.query(sql, [user_id, formattedRequestDate, reason, formattedStartTime, formattedEndTime]);
 
         if (result.affectedRows > 0) {
             // Fetch the user's name for the notification message
@@ -93,7 +94,10 @@ const displayOvertime = async (req, res) => {
                 TIMESTAMPDIFF(HOUR, start_time, end_time) AS hours,
                 action_status,
                 reason,
-                overtime_type
+                overtime_type,
+                start_time,
+                end_time,
+                overtime_id
             FROM tbl_overtime
             WHERE user_id = ?;
         `;
@@ -107,6 +111,13 @@ const displayOvertime = async (req, res) => {
         data.forEach(item => {
             const rate = item.overtime_type === 'Holiday' ? holiday_rate : normal_day_rate;
             item.overtime_pay = `$${(item.hours * rate).toFixed(2)}`;
+
+            // Format request_date to "DD-MMMM-YYYY"
+            item.request_date = moment(item.request_date).format("DD-MMMM-YYYY");
+
+            // Format start_time and end_time to "hh:mm A"
+            item.start_time = moment(item.start_time, "HH:mm:ss").format("hh:mm A");
+            item.end_time = moment(item.end_time, "HH:mm:ss").format("hh:mm A");
         });
 
         res.status(200).json({ result: true, data: data });
@@ -137,11 +148,14 @@ const detailOvertime = async (req, res) => {
                     request_date,
                     TIMESTAMPDIFF(HOUR, start_time, end_time) AS hours,
                     action_status,
-                    reason
+                    reason,
+                    overtime_type,
+                    start_time,
+                    end_time,
+                    overtime_id
                 FROM tbl_overtime
                 WHERE
                     overtime_id =?
-
     `;
     const [data] = await con.query(sql, [overtime_id])
     if (data.length === 0) {
@@ -150,6 +164,13 @@ const detailOvertime = async (req, res) => {
     data.forEach(item => {
         const rate = item.overtime_type === 'Holiday' ? holiday_rate : normal_day_rate;
         item.overtime_pay = `$${(item.hours * rate).toFixed(2)}`;
+
+        // Format request_date to "DD-MMMM-YYYY"
+        item.request_date = moment(item.request_date).format("DD-MMMM-YYYY");
+
+        // Format start_time and end_time to "hh:mm A"
+        item.start_time = moment(item.start_time, "HH:mm:ss").format("hh:mm A");
+        item.end_time = moment(item.end_time, "HH:mm:ss").format("hh:mm A");
     });
     res.status(200).json({ result: true, data: data });
 }
@@ -180,8 +201,8 @@ const displayAllOvertimeRequest = async (req, res) => {
                 d.department_name,
                 p.position_name,
                 ot.request_date,
-                DATE_FORMAT(ot.start_time, '%h:%i %p') AS start_time,
-                DATE_FORMAT(ot.end_time, '%h:%i %p') AS end_time,
+                ot.start_time,
+                ot.end_time,
                 ot.action_status,
                 ot.overtime_type,
                 ot.reason,
@@ -201,6 +222,13 @@ const displayAllOvertimeRequest = async (req, res) => {
         data.forEach(item => {
             const rate = item.overtime_type === 'Holiday' ? holiday_rate : normal_day_rate;
             item.overtime_pay = `$${(item.hours * rate).toFixed(2)}`;
+
+            // Format request_date to "DD-MMMM-YYYY"
+            item.request_date = moment(item.request_date).format("DD-MMMM-YYYY");
+
+            // Format start_time and end_time to "hh:mm A"
+            item.start_time = moment(item.start_time, "HH:mm:ss").format("hh:mm A");
+            item.end_time = moment(item.end_time, "HH:mm:ss").format("hh:mm A");
         });
 
         res.status(200).json({ result: true, data });
@@ -209,7 +237,6 @@ const displayAllOvertimeRequest = async (req, res) => {
         return res.status(500).json({ result: false, msg: "Internal server error" });
     }
 };
-
 
 const controllOvetimeRequest = async (req, res) => {
     try {
@@ -317,8 +344,8 @@ const viewDetailOvertimeRequest = async (req, res) => {
                         p.position_name,
                         TIMESTAMPDIFF(HOUR, ot.start_time, ot.end_time) AS hours,
                         ot.request_date,
-                        DATE_FORMAT(ot.start_time, '%h:%i %p') AS start_time,
-                        DATE_FORMAT(ot.end_time, '%h:%i %p') AS end_time,
+                        ot.start_time,
+                        ot.end_time,
                         ot.action_status,
                         ot.overtime_type
                     FROM tbl_overtime ot
@@ -334,6 +361,13 @@ const viewDetailOvertimeRequest = async (req, res) => {
         data.forEach(item => {
             const rate = item.overtime_type === 'Holiday' ? holiday_rate : normal_day_rate;
             item.overtime_pay = `$${((item.hours) * rate).toFixed(2)}`;
+
+            // Format request_date to "DD-MMMM-YYYY"
+            item.request_date = moment(item.request_date).format("DD-MMMM-YYYY");
+
+            // Format start_time and end_time to "hh:mm A"
+            item.start_time = moment(item.start_time, "HH:mm:ss").format("hh:mm A");
+            item.end_time = moment(item.end_time, "HH:mm:ss").format("hh:mm A");
         });
         res.status(200).json({ result: true, data: data });
     } catch (error) {
@@ -354,6 +388,7 @@ const assignOvertime = async (req, res) => {
 
     try {
         // Convert the input time from 12-hour format to 24-hour format
+        const formattedRequestDate = moment(request_date, "DD-MMMM-YYYY").format("YYYY-MM-DD");
         const formattedStartTime = moment(start_time, "hh:mm A").format("HH:mm:ss");
         const formattedEndTime = moment(end_time, "hh:mm A").format("HH:mm:ss");
 
@@ -362,7 +397,7 @@ const assignOvertime = async (req, res) => {
             INSERT INTO tbl_overtime (user_id, request_date, overtime_type, reason, start_time, end_time, action_status) 
             VALUES (?, ?, ?, ?,?, ?, 'Assigned')
         `;
-        const [result] = await con.query(insertOvertimeSql, [user_id, request_date, overtime_type, reason, formattedStartTime, formattedEndTime]);
+        const [result] = await con.query(insertOvertimeSql, [user_id, formattedRequestDate, overtime_type, reason, formattedStartTime, formattedEndTime]);
 
         if (result.affectedRows > 0) {
             // Fetch the employee's name for the notification message
