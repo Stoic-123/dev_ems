@@ -1,0 +1,585 @@
+
+<div class="row my-4">
+
+    <div class="col-12">
+        <h4 class=" text-gray-600 mb-2">Manage Company</h4>
+        <p class="fs-16 text-gray-500 mb-4">Manage Company Information.</p>
+    </div>
+    <div class="col-5">
+      <div class="nav-container mt-4 mb-5">
+            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="nav-company-tab" data-bs-toggle="pill" data-bs-target="#nav-company"
+                  type="button" role="tab" aria-controls="nav-company" aria-selected="true">Company Detail</button>
+              </li>
+              <li class="nav-item " role="presentation">
+                <button class="nav-link" id="nav-department-tab" data-bs-toggle="pill" data-bs-target="#nav-department"
+                  type="button" role="tab" aria-controls="nav-department" aria-selected="false">Department</button>
+              </li>
+            </ul>
+      </div>
+    </div>
+    <div class="col-12">
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-company" role="tabpanel" aria-labelledby="nav-company-tab" tabindex="0">
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="card custome-box-shadow border-0">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="d-flex justify-content-between align-items-center w-100 border-bottom pb-2 mb-3">
+                                            <p class="fs-18-bold">Company Information</p>
+                                            <button class="btn" data-bs-toggle="modal" data-bs-target="#editInformation"><span><i class="fs-18-bold fa-duotone fa-light fa-pen-to-square"></i></span></button>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <p class="fs-16-bold mb-3 text-center">Company Logo</p>
+                                        <div class="company-logo">
+                                            <img src="assets/img/image.png" alt="Company Logo">
+                                        </div>
+                                    </div>
+                                    <div class="col-10">
+                                        <div class="mb-3 d-flex justify-content-between align-items-center">
+                                            <label for="company" class="form-label text-gray-500">Company Name:</label>
+                                            <input type="text" class="form-control show-value" id="companyName" placeholder="Show Name" readonly>
+                                        </div>
+                                        <div class="mb-3 d-flex justify-content-between align-items-center">
+                                            <label for="company" class="form-label text-gray-500">Register Number:</label>
+                                            <input type="text" class="form-control show-value" id="companyName" placeholder="Show Register Number" readonly>
+                                        </div>
+                                        <div class="mb-3 d-flex justify-content-between align-items-center">
+                                            <label for="company" class="form-label text-gray-500">Incorporation Date:</label>
+                                            <input type="text" class="form-control show-value" id="companyName" placeholder="Show Incorporation Date" readonly>
+                                        </div>
+                                        <div class="mb-3 d-flex justify-content-between align-items-center">
+                                        <label for="company" class="form-label text-gray-500">Address:</label>
+                                            <textarea class="form-control show-value" id="companyAdress" placeholder="Show Address" style="height: 100px;" readonly></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card custome-box-shadow border-0">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="d-flex justify-content-between align-items-center w-100 border-bottom pb-2 mb-3">
+                                            <p class="fs-18-bold">Contact</p>
+                                            <button class="btn" data-bs-toggle="modal" data-bs-target="#editContact"><span><i class="fs-18 fa-duotone fa-light fa-pen-to-square"></i></span></button>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="mb-3">
+                                            <label for="company" class="form-label text-gray-500">Phone Number:</label>
+                                            <input type="text" class="form-control show-value w-100" id="companyName" placeholder="Show Phone Number" readonly>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="company" class="form-label text-gray-500">Email:</label>
+                                            <input type="text" class="form-control show-value w-100" id="companyName" placeholder="Show Email Address" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card custome-box-shadow border-0">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="d-flex justify-content-between align-items-center w-100 border-bottom pb-2 mb-3">
+                                            <p class="fs-18-bold">Document</p>
+                                            <button class="btn btn-outline-primary fs-18" data-bs-toggle="modal" data-bs-target="#addDoc"><span><i class="fs-18-bold fa-regular fa-square-plus me-2"></i></span>Add Document</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="table-container">
+                                            <table id="leaveTable" class="display" cellspacing="0" width="100%">
+                                                <thead>
+                                                  <tr>
+                                                    <th>Name</th>
+                                                    <th>Date</th>
+                                                    <th>Description</th>
+                                                    <th>Action</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>file.pfd</td>
+                                                        <td>03-Feb-2025</td>
+                                                        <td>Contract</td>
+                                                        <td>
+                                                          <button class="btn" data-bs-toggle="modal" data-bs-target="#editDoc"><span><i class="text-primary fs-18 fa-duotone fa-light fa-pen-to-square"></i></span></button>
+                                                          <button class="btn" data-bs-toggle="modal" data-bs-target="#"><span><i class="text-danger fs-18-bold fa-regular fa-trash-can"></i></span></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>file.pfd</td>
+                                                        <td>03-Feb-2025</td>
+                                                        <td>Contract</td>
+                                                        <td>
+                                                          <button class="btn" data-bs-toggle="modal" data-bs-target="#editDoc"><span><i class="text-primary fs-18 fa-duotone fa-light fa-pen-to-square"></i></span></button>
+                                                          <button class="btn" data-bs-toggle="modal" data-bs-target="#"><span><i class="text-danger fs-18-bold fa-regular fa-trash-can"></i></span></button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                              </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade show" id="nav-department" role="tabpanel" aria-labelledby="nav-department-tab" tabindex="0">
+              <div class="row">
+                <div class="col-12">
+                  <div class="card border-0 custome-box-shadow">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-center my-3">
+                        <div class="">
+                          <p class="fs-14 text-gray-600 mb-3">All Departments</p>
+                          <h5 class="fs-20-bold text-center"><span class="me-2">6</span> Departments</h5>
+                        </div>
+                        <button class="btn btn-primary fs-18" data-bs-toggle="modal" data-bs-target="#addDept">
+                          <span><i class="fs-18-bold fa-regular fa-square-plus me-2"></i></span>Add Department
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="card custome-box-shadow border-0 my-4">
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="col-12">
+                                  <div class="d-flex justify-content-between align-items-center w-100 border-bottom pb-2 mb-3">
+                                      <p class="fs-18-bold">Web Development</p>
+                                      <div class="d-flex">
+                                      <button class="btn" data-bs-toggle="modal" data-bs-target="#editDept"><span><i class="fs-18 fa-duotone fa-light fa-pen-to-square"></i></span></button>
+                                      <button class="btn" data-bs-toggle="modal" data-bs-target="#"><span><i class="fs-18-bold fa-regular fa-trash-can"></i></span></button>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-12">
+                                  <div class="d-flex align-items-center"> 
+                                  <div class="hod-profile me-4">
+                                        <img src="https://img.freepik.com/free-photo/portrait-handsome-young-man-with-arms-crossed-holding-white-headphone-around-his-neck_23-2148096439.jpg?t=st=1738739629~exp=1738743229~hmac=6ae974c109e2f98304e7d99c8c48017747d3c7104283371d9128307fbc167067&w=360" alt="HoD-Image">
+                                      </div>
+                                      <div class="hod-title">
+                                        <h5 class="fs-18-bold text-gray-500 mb-2">Joe Seph</h5>
+                                        <p class="fs-14 text-gray-600">Head of Department</p>
+                                      </div>
+                                  </div>
+                                  <div class="d-flex align-items-center mt-4">
+                                    <i class="text-primary fa-solid fa-users text-gray-500 me-3"></i>
+                                    <p class="fs-18 text-primary"><span class="emp-num me-2">32</span>Employees</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="card custome-box-shadow border-0 my-4">
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="col-12">
+                                  <div class="d-flex justify-content-between align-items-center w-100 border-bottom pb-2 mb-3">
+                                      <p class="fs-18-bold">Web Development</p>
+                                      <div class="d-flex">
+                                      <button class="btn" data-bs-toggle="modal" data-bs-target="#editDept"><span><i class="fs-18 fa-duotone fa-light fa-pen-to-square"></i></span></button>
+                                      <button class="btn" data-bs-toggle="modal" data-bs-target="#"><span><i class="fs-18-bold fa-regular fa-trash-can"></i></span></button>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-12">
+                                  <div class="d-flex align-items-center">
+                                      <div class="hod-profile me-4">
+                                        <img src="https://img.freepik.com/free-photo/portrait-handsome-young-man-with-arms-crossed-holding-white-headphone-around-his-neck_23-2148096439.jpg?t=st=1738739629~exp=1738743229~hmac=6ae974c109e2f98304e7d99c8c48017747d3c7104283371d9128307fbc167067&w=360" alt="HoD-Image">
+                                      </div>
+                                      <div class="hod-title">
+                                        <h5 class="fs-18-bold text-gray-500 mb-2">Joe Seph</h5>
+                                        <p class="fs-14 text-gray-600">Head of Department</p>
+                                      </div>
+                                  </div>
+                                  <div class="d-flex align-items-center mt-4">
+                                    <i class="text-primary fa-solid fa-users text-gray-500 me-3"></i>
+                                    <p class="fs-18 text-primary"><span class="emp-num me-2">32</span>Employees</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <!-- edit information Modal -->
+    <div class="modal fade" id="editInformation" tabindex="-1" aria-labelledby="editInformationLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content p-3">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 text-gray-500" id="editInformationLabel">Update Company Information</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="row">
+                  <div class="d-flex justify-content-center">
+                    <div class="col-4">
+                        <p class="fs-16-bold mb-2 text-center">Company Logo</p>
+                        <div class="company-logo mb-3 position-relative">
+                            <img src="assets/img/image.png" alt="Company Logo">
+                            <div class="edit-img">
+                                <i class="pencil fa-duotone fa-light fa-pen-to-square"></i>
+                                <input class="form-control edit-logo position-absolute" type="file">
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="mb-3">
+                      <label for="companyName" class="form-label">Company Name:</label>
+                      <input class="form-control" id="companyName"></input>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="mb-3">
+                      <label for="registerNumber" class="form-label">Register Number:</label>
+                      <input class="form-control" id="registerNumber"></input>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="mb-3">
+                      <label for="reason" class="form-label">Incorporation Date:</label>
+                      <div class="position-relative w-100">
+                        <input class="select-date w-100" type="text" id="flatpickr" placeholder="">
+                        <span class="arrow-down"><i class="fa-regular fa-calendar"></i></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="mb-3">
+                      <label for="address" class="form-label">Address:</label>
+                      <textarea class="form-control" id="address" rows="3"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <!-- edit contact Modal -->
+    <div class="modal fade" id="editContact" tabindex="-1" aria-labelledby="editContactLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content p-3">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 text-gray-500" id="editContactLabel">Update Contact Information</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="mb-3">
+                      <label for="phoneNumber" class="form-label">Phone Number:</label>
+                      <input class="form-control" id="phoneNumber"></input>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Email:</label>
+                      <input class="form-control" id="email"></input>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- add document modal -->
+
+    <div class="modal fade" id="addDoc" tabindex="-1" aria-labelledby="addDocLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content p-3">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 text-gray-500" id="addDocLabel">Add Document</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="mb-3">
+                      <label for="des" class="form-label">Document Description:</label>
+                      <input class="form-control" id="des"></input>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label for="formFile" class="form-label">Upload Document:</label>
+                    <div class="mb-3 leave-file position-relative overflow-hidden">
+                      <div class="drop-file">
+                        <div class="wrape">
+                          <span><i class="fs-18 text-primary fa-solid fa-cloud-arrow-up"></i></span>
+                          <p class="fs-16 text-primary">Drag & drop to upload </p>
+                          <span class="text-info">or Browse</span>
+    
+                          <!-- <div class="preview-file">
+                            <p>Show Selected File Here</p>
+                          </div> -->
+    
+                        </div>
+                      </div>
+                      <input class="" type="file" id="" name="">
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- edit document modal -->
+    <div class="modal fade" id="editDoc" tabindex="-1" aria-labelledby="editDocLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content p-3">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 text-gray-500" id="editDocLabel">Update Document</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="mb-3">
+                      <input class="form-control pre-des" id="pre-des" readonly></input>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="mb-3">
+                      <label for="reason" class="form-label">Document Description:</label>
+                      <input class="form-control" id="des"></input>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label for="formFile" class="form-label">Upload Document:</label>
+                    <div class="mb-3 leave-file position-relative overflow-hidden">
+                      <div class="drop-file">
+                        <div class="wrape">
+                          <span><i class="fs-18 text-primary fa-solid fa-cloud-arrow-up"></i></span>
+                          <p class="fs-16 text-primary">Drag & drop to upload </p>
+                          <span class="text-info">or Browse</span>
+    
+                          <!-- <div class="preview-file">
+                            <p>Show Selected File Here</p>
+                          </div> -->
+    
+                        </div>
+                      </div>
+                      <input class="" type="file" id="" name="">
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <!-- add department modal -->
+    <div class="modal fade" id="addDept" tabindex="-1" aria-labelledby="addDeptLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content p-3">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 text-gray-500" id="editDocLabel">Add Department</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="mb-3">
+                      <label for="deptName" class="form-label">Department Name:</label>
+                      <input class="form-control" id="deptName" placeholder="Web Development"></input>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="mb-3">
+                      <label for="" class="form-label">Head Of Department:</label>
+                      <select name="" id="" class="form-select">
+                        <option value="1" disabled>Select Employee</option>
+                        <option value="2">emp1</option>
+                        <option value="3">emp2</option>
+                        <option value="4">emp3</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="mb-3">
+                      <label for="deptDescription" class="form-label">Description:</label>
+                      <textarea name="" id="" class="form-control" rows="3"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <!-- edit department modal -->
+    <div class="modal fade" id="editDept" tabindex="-1" aria-labelledby="editDeptLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content p-3">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 text-gray-500" id="editDeptLabel">Update Department</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="mb-3">
+                      <label for="deptName" class="form-label">Department Name:</label>
+                      <input class="form-control" id="deptName" placeholder="Web Development"></input>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="mb-3">
+                      <label for="" class="form-label">Head Of Department:</label>
+                      <select name="" id="" class="form-select">
+                        <option value="1" disabled>Select Employee</option>
+                        <option value="2">emp1</option>
+                        <option value="3">emp2</option>
+                        <option value="4">emp3</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="mb-3">
+                      <label for="deptDescription" class="form-label">Description:</label>
+                      <textarea name="" id="" class="form-control" rows="3"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="mb-3">
+                      <label for="deptStatus" class="form-label">Department Status:</label>
+                      <select name="" id="" class="form-select">
+                        <option value="1">Active</option>
+                        <option value="2">Inactive</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- department detail modal -->
+
+    <div class="modal fade" id="deptdetail" tabindex="-1" aria-labelledby="deptdetailLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content p-3">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 text-gray-600" id="requestLeaveLabel">Department Detail</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="row">
+                <div class="col-12">
+                <div class="col-12">
+                    <div class="card border-0 card-noshadow">
+                      <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                          <div class="w-50">
+                            <h5 class="fs-18-bold text-gray-600">Department Name:</h5>
+                          </div>
+                          <div class="w-50">
+                            <p class="fs-18 text-gray-500">Web Development</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="card border-0 card-noshadow">
+                      <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                          <div class="w-50">
+                            <h5 class="fs-18-bold text-gray-600">Status:</h5>
+                          </div>
+                          <div class="w-50">
+                            <p class="fs-18 overtime-status text-start">Active</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="card border-0 card-noshadow">
+                      <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                          <div class="w-50">
+                            <h5 class="fs-18-bold text-gray-600">Total Employees:</h5>
+                          </div>
+                          <div class="w-50">
+                            <p class="fs-18 text-gray-500">32</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>

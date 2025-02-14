@@ -1,0 +1,533 @@
+
+
+<!-- Attendance Overview Section -->
+<section class="my-4">
+    <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+            <div class="custome-box-shadow p-3 bg-white rounded-12 h-100 rounded-8">
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <p class="fs-16 text-gray-500">Employees</p>
+                        <i class="fa-solid fa-users-line me-2 mb-0 text-primary"></i>
+                    </div>
+                    <p class="card-title h4  fw-bold text-gray-600">199</p>
+                    <div class="d-flex align-items-center gap-3">
+                        <p class="card-text text-16 my-2 text-success">+2</p>
+                        <p class="text-gray-500">VS</p>
+                        <p class="text-gray-500">This month</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="custome-box-shadow p-3 bg-white rounded-12 h-100 rounded-8">
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <p class="fs-16 text-gray-500">Total paid</p>
+                        <i class="fa-solid fa-dollar-sign me-2 fs-18 mb-0 text-success"></i>
+                    </div>
+                    <p class="card-title h4  fw-bold text-gray-600">$123,456</p>
+                    <div class="d-flex align-items-center gap-3">
+                        <p class="card-text text-16 my-2 text-danger">-12.5%</p>
+                        <p class="text-gray-500">VS</p>
+                        <p class="text-gray-500">This month</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="custome-box-shadow p-3 bg-white rounded-12 h-100 rounded-8">
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <p class="fs-16 text-gray-500">Paid</p>
+                        <i class="fa-solid fa-dollar-sign me-2 fs-18 mb-0 text-success"></i>
+                    </div>
+                    <p class="card-title h4  fw-bold text-gray-600">$123,456</p>
+                    <div class="d-flex align-items-center gap-3">
+                        <p class="card-text text-16 my-2 text-gray-500">99 employees are paid already</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="custome-box-shadow p-3 bg-white rounded-12 h-100 rounded-8">
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <p class="fs-16 text-gray-500">Next Payday</p>
+                        <i class="fa-regular fa-calendar-days me-2 mb-0 text-primary"></i>
+                    </div>
+                    <p class="card-title h4  fw-bold text-gray-600">In 27 day</p>
+                    <div class="d-flex align-items-center gap-3 mt-2">
+                        <p class="text-gray-500">25 Dec 2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="payroll-all-employees mt-4">
+        <div class="p-3 bg-white custome-box-shadow rounded-8">
+            <p class="fs-16 text-gray-500">Pending</p>
+            <div class="card-body mt-2">
+                <p class="card-title h4  fw-bold text-gray-600">$123,456</p>
+                <div class="d-flex align-items-center gap-3">
+                    <p class="card-text text-16 my-2 text-gray-500">100 employees are pending for there pay</p>
+                </div>
+                <button class="btn btn-primary px-4" onclick="startPayroll()"  data-bs-toggle="modal" data-bs-target="#startPayroll">Start Payall</button>
+            </div>
+        </div>
+</section>
+
+<section class="my-4">
+    <div class="d-flex justify-content-between py-3 px-4 bg-white table-container-cus-2 border-bottom">
+        <div class="d-flex align-items-center gap-3">
+            <p class="text-gray-600 h5 fw-bold">payroll list</p>
+            <div class="serach-box-payroll d-flex ">
+                <i class="fa-solid fa-magnifying-glass text-gray-600"></i>
+                <input type="text" class="ms-2 search-box text-gray-500 w-100">
+            </div>
+        </div>
+        <div class="d-flex align-items-center gap-4 text-gray-600">
+            <div>
+                <i class="fa-regular fa-calendar-days"></i>
+                <button type="button" id="datePickerBtn" class="btn date-text fs-18-bold p-2">October 2025</button>
+            </div>
+            <div class="d-flex gap-2 align-items-center">
+                <i class="fa-solid fa-filter"></i>
+                <select id="statusFilter" class="border-0 " style="outline: none;">
+                    <option value="all">All Status</option>
+                    <option value="paid">Paid</option>
+                    <option value="pending">Pending</option>
+                </select>
+            </div>                        
+            <div class="cursor-pointer d-flex gap-2 align-items-center">
+                <i class="fa-solid fa-file-export"></i>
+                <span>Export</span>
+            </div>
+        </div>
+    </div>
+    <div class="table-container table-container-cus">
+        <table id="" class="display salaryTable">
+            <thead>
+                <tr>
+                    <th>
+                        <div class="d-flex justify-content-center">
+                            <input type="checkbox" id="selectAll" class="mb-0 pb-0 bg-primary">
+                        </div>
+                    </th>
+                    <th style="cursor: pointer;" class="employees-name">
+                        <i class="fa-solid fa-sort"></i>
+                        <span class="mx-2">Employee Name</span>
+                    </th>
+                    <th>Base Salary</th>
+                    <th>13th Salary</th>
+                    <th>Tax</th>
+                    <th>Overtime</th>
+                    <th>Deduction</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="clickable-row">
+                    <td>
+                        <div class="d-flex justify-content-center">
+                            <input type="checkbox" class="selectRow">
+                        </div>
+                    </td>
+                    <td class="name-department-position">
+                        <div class="profile-em-payroll">
+                            <img src="upload/default.png" alt="">
+                        </div>
+                        <div>
+                            <p class="text-gray-600 fs-16">AAA</p>
+                            <p class="text-gray-500">Web development/Front end</p>
+                        </div>
+                    </td>
+                    <td>$699.00</td>
+                    <td>$399.00</td>
+                    <td>$49.00</td>
+                    <td>$550.00</td>
+                    <td>$00.00</td>
+                    <td>$1099.00</td>
+                    <td><span class="status-paid">Paid</span></td>
+                </tr>                            
+                <tr class="clickable-row">
+                    <td>
+                        <div class="d-flex justify-content-center">
+                            <input type="checkbox" class="selectRow">
+                        </div>
+                    </td>
+                    <td class="name-department-position">
+                        <div class="profile-em-payroll">
+                            <img src="upload/default.png" alt="">
+                        </div>
+                        <div>
+                            <p class="text-gray-600 fs-16">BBB</p>
+                            <p class="text-gray-500">Web development/Front end</p>
+                        </div>
+                    </td>
+                    <td>$699.00</td>
+                    <td>$399.00</td>
+                    <td>$49.00</td>
+                    <td>$550.00</td>
+                    <td>$00.00</td>
+                    <td>$1099.00</td>
+                    <td><span class="status-paid">Paid</span></td>
+                </tr>
+                <tr class="clickable-row">
+                    <td>
+                        <div class="d-flex justify-content-center">
+                            <input type="checkbox" class="selectRow">
+                        </div>
+                    </td>
+                    <td class="name-department-position">
+                        <div class="profile-em-payroll">
+                            <img src="upload/default.png" alt="">
+                        </div>
+                        <div>
+                            <p class="text-gray-600 fs-16">Lyhor</p>
+                            <p class="text-gray-500">App development/JAVA</p>
+                        </div>
+                    </td>
+                    <td>$699.00</td>
+                    <td>$399.00</td>
+                    <td>$49.00</td>
+                    <td>$550.00</td>
+                    <td>$00.00</td>
+                    <td>$1099.00</td>
+                    <td><span class="status-pending text-warning">Pending</span></td>
+                </tr>
+                <tr class="clickable-row">
+                    <td>
+                        <div class="d-flex justify-content-center">
+                            <input type="checkbox" class="selectRow">
+                        </div>
+                    </td>
+                    <td class="name-department-position">
+                        <div class="profile-em-payroll">
+                            <img src="upload/default.png" alt="">
+                        </div>
+                        <div>
+                            <p class="text-gray-600 fs-16">Lyhor</p>
+                            <p class="text-gray-500">App development/JAVA</p>
+                        </div>
+                    </td>
+                    <td>$699.00</td>
+                    <td>$399.00</td>
+                    <td>$49.00</td>
+                    <td>$550.00</td>
+                    <td>$00.00</td>
+                    <td>$1099.00</td>
+                    <td><span class="status-pending text-warning">Pending</span></td>
+                </tr>
+                <tr class="clickable-row">
+                    <td>
+                        <div class="d-flex justify-content-center">
+                            <input type="checkbox" class="selectRow">
+                        </div>
+                    </td>
+                    <td class="name-department-position">
+                        <div class="profile-em-payroll">
+                            <img src="upload/default.png" alt="">
+                        </div>
+                        <div>
+                            <p class="text-gray-600 fs-16">Lyhor</p>
+                            <p class="text-gray-500">App development/JAVA</p>
+                        </div>
+                    </td>
+                    <td>$699.00</td>
+                    <td>$399.00</td>
+                    <td>$49.00</td>
+                    <td>$550.00</td>
+                    <td>$00.00</td>
+                    <td>$1099.00</td>
+                    <td><span class="status-pending text-warning">Pending</span></td>
+                </tr>
+                <tr class="clickable-row">
+                    <td>
+                        <div class="d-flex justify-content-center">
+                            <input type="checkbox" class="selectRow">
+                        </div>
+                    </td>
+                    <td class="name-department-position">
+                        <div class="profile-em-payroll">
+                            <img src="upload/default.png" alt="">
+                        </div>
+                        <div>
+                            <p class="text-gray-600 fs-16">phan Lyhor</p>
+                            <p class="text-gray-500">App development/JAVA</p>
+                        </div>
+                    </td>
+                    <td>$699.00</td>
+                    <td>$399.00</td>
+                    <td>$49.00</td>
+                    <td>$550.00</td>
+                    <td>$00.00</td>
+                    <td>$1099.00</td>
+                    <td><span class="status-pending text-warning">Pending</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <nav aria-label="Page navigation">
+        <ul id="pagination" class="pagination">
+        </ul>
+    </nav>
+</section>
+
+
+<!-- Update Status Modal -->
+<div class="modal fade bg-color" id="startPayroll" tabindex="-1" aria-labelledby="updateStatusModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="payroll-container">
+                <!-- Step 1: Earnings -->
+                <div id="step1" class="step-card">
+                    <div class="icon-circle earnings-bg mx-auto">
+                        $
+                    </div>
+                    <p class="mb-3 h4 fw-bold text-gray-600">Calculating Earnings...</p>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 20%"></div>
+                    </div>
+                </div>
+                
+                <!-- Step 2: Tax -->
+                <div id="step2" class="step-card">
+                    <div class="icon-circle tax-bg mx-auto">
+                        TAX
+                    </div>
+                    <p class="mb-3 h4 fw-bold text-gray-600">Calculating Taxes...</p>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 40%"></div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Overtime -->
+                <div id="step3" class="step-card">
+                    <div class="icon-circle overtime-bg mx-auto">
+                        OT
+                    </div>
+                    <p class="mb-3 h4 fw-bold text-gray-600">Calculating Overtime...</p>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 60%"></div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Deductions -->
+                <div id="step4" class="step-card">
+                    <div class="icon-circle deductions-bg mx-auto">
+                        <i class="fa-solid fa-minus h2 mb-0 pb-0"></i>
+                    </div>
+                    <p class="mb-3 h4 fw-bold text-gray-600">Calculating Deductions...</p>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <!-- Step 5: Complete -->
+                <div id="step5" class="step-card">
+                    <div class="icon-circle complete-bg mx-auto">
+                        ✓
+                    </div>
+                    <p class="mb-3 h4 fw-bold text-gray-600">Payroll Preview Ready!</p>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 100%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade cus-blur-modal" id="updateStatusModal" tabindex="-1" aria-labelledby="updateStatusModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content modal-content-border-0">
+            <div class="modal-header border-0 pb-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body px-4 pt-0">
+                <div class="d-flex align-items-center mb-4">
+                    <img src="upload/default.png" alt="" class="rounded-circle me-3" width="48" height="48">
+                    <div>
+                        <p class="mb-0 fs-18-bold " id="employeeName">Phan lyhor</p>
+                        <p class="text-muted mb-0 small" id="employeePosition">Web development / front end</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row g-3 mb-4">
+                    <div class="col-6">
+                        <div class="d-flex flex-column">
+                            <span class="fs-14 text-gray-500">Base salary</span>
+                            <span class="fs-16-bold text-gray-600" id="baseSalary">$550.00</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex flex-column">
+                            <span class="fs-14 text-gray-500">13th salary</span>
+                            <span class="fs-16-bold text-gray-600" id="bonusSalary">$00.00</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex flex-column">
+                            <span class="fs-14 text-gray-500">Tax</span>
+                            <span class="fs-16-bold text-gray-600" id="bonusSalary">$00.00</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex flex-column">
+                            <span class="fs-14 text-gray-500">Overtime</span>
+                            <span class="fs-16-bold text-gray-600" id="overtime">$50.00</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex flex-column">
+                            <span class="fs-14 text-gray-500">Deduction</span>
+                            <span class="fs-16-bold text-gray-600" id="deduction">$00.00</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex flex-column">
+                            <span class="fs-14 text-gray-500">Total salary</span>
+                            <span class="fs-16-bold text-gray-600" id="totalSalary">$700.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <p class="fs-16-bold text-gray-600 mb-3">Status</p>
+                    <div class="d-flex gap-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="status" id="statusPending" value="Pending">
+                            <label class="form-check-label" for="statusPending">Pending</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="status" id="statusPaid" value="Paid">
+                            <label class="form-check-label" for="statusPaid">Paid</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex gap-2 mb-3">
+                    <button type="button" class="btn btn-secondary flex-fill" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn bg-primary text-white flex-fill" id="saveStatus">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="paid_successful" class="toast my-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">Notification</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            paid to employee (Name)  successfully!
+        </div>
+    </div>        
+</div>
+
+<!-- View Details Modal -->
+<div class="modal fade cus-blur-modal" id="viewDetailsModal" tabindex="-1" aria-labelledby="viewDetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow modal-content-border-0">
+            <div class="modal-header border-0 pb-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body px-4 pt-0">
+                <div class="d-flex align-items-center mb-4">
+                    <img src="upload/default.png" alt="" class="rounded-circle me-3" width="48" height="48">
+                    <div>
+                        <p class="mb-0 fs-18-bold " id="employeeName">Phan lyhor</p>
+                        <p class="text-muted mb-0 small" id="detailEmployeePosition">Web development / front end</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row g-3 mb-4">
+                    <div class="col-6">
+                        <div class="d-flex flex-column">
+                            <span class="fs-14 text-gray-500">Base salary</span>
+                            <span class="fs-16-bold text-gray-600" id="baseSalary">$550.00</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex flex-column">
+                            <span class="fs-14 text-gray-500">13th salary</span>
+                            <span class="fs-16-bold text-gray-600" id="bonusSalary">$00.00</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex flex-column">
+                            <span class="fs-14 text-gray-500">Tax</span>
+                            <span class="fs-16-bold text-gray-600" id="bonusSalary">$00.00</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex flex-column">
+                            <span class="fs-14 text-gray-500">Overtime</span>
+                            <span class="fs-16-bold text-gray-600" id="overtime">$50.00</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex flex-column">
+                            <span class="fs-14 text-gray-500">Deduction</span>
+                            <span class="fs-16-bold text-gray-600" id="deduction">$00.00</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex flex-column">
+                            <span class="fs-14 text-gray-500">Total salary</span>
+                            <span class="fs-16-bold text-gray-600" id="totalSalary">$700.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <p class="fs-16-bold text-gray-600 mb-3">Status</p>
+                    <span class="text-success fs-16-bold">Paid</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Modal -->
+<div class="modal fade cus-blur-modal" id="monthYearModal" tabindex="-1" aria-labelledby="monthYearModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="monthYearModalLabel">Select Month & Year</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="yearSelect" class="form-label">Select Year:</label>
+                    <select id="yearSelect" class="form-select"></select>
+                </div>
+                <div class="month-grid">
+                    <div class="month-btn" data-month="January">January</div>
+                    <div class="month-btn" data-month="February">February</div>
+                    <div class="month-btn" data-month="March">March</div>
+                    <div class="month-btn" data-month="April">April</div>
+                    <div class="month-btn" data-month="May">May</div>
+                    <div class="month-btn" data-month="June">June</div>
+                    <div class="month-btn" data-month="July">July</div>
+                    <div class="month-btn" data-month="August">August</div>
+                    <div class="month-btn" data-month="September">September</div>
+                    <div class="month-btn" data-month="October">October</div>
+                    <div class="month-btn" data-month="November">November</div>
+                    <div class="month-btn" data-month="December">December</div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary px-3" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn bg-primary text-white px-3" id="saveDateBtn">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

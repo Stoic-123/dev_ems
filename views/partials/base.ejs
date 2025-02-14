@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- head -->
+<%- include('./head') %>
+    <!-- end of head -->
+
+    <body class="bg-color login-bg staff-db" id="body">
+        <!-- header -->
+        <%- include('./header') %>
+
+            <main class="overflow-hidden">
+                <div class="container-fluid pe-0">
+                    <div class="row">
+                        <!-- sidebar -->
+                        <div class="col-2 pe-0 sidebar-wrapper position-relative" id="sidebarWrapper">
+                            <%- include('./sidebar')%>
+                        </div>
+
+                        <!-- content -->
+                        <!-- write your code here -->
+
+                        <div class="col-10 px-5 position-relative" id="contentWrapper">
+                            <%- include(contentFile) %>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+            
+    
+    <!-- <%- include('./footer.ejs') %> -->
+    
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="vendor/tomselect/tom-select.complete.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+
+    
+    <script src="assets/js/componentScript.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/emManagement.js"></script>
+    <script src="assets/js/adminDashboard.js"></script>
+    <script src="assets/js/staffrequest.js"></script>
+    <script src="assets/js/announcement.js"></script>
+    <script src="assets/js/staffrequest.js"></script>
+    <script src="assets/js/getAttendanceForAdmin.js"></script>
+    <script src="assets/js/payrollmanagement.js"></script>
+    <script src="assets/js/overview.js"></script>
+    <script src="assets/js/payroll.js"></script>
+    <script src="assets/js/getRequest.js"></script>
+
+    </body>
+
+</html>

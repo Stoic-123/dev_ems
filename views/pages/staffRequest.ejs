@@ -1,0 +1,693 @@
+
+<div class="row my-4">
+  <div class="col-12">
+    <h4 class=" text-gray-600 mb-2">Your Request</h4>
+    <p class="fs-16 text-gray-500 mb-4">See all your Leave and Overtime request.</p>
+  </div>
+  <div class="col-6">
+    <div class="card h-100 custome-box-shadow border-0">
+      <div class="card-body">
+        <p class="text-capitalize mb-4 fs-18"><span><i
+              class="text-success me-2 fs-18 fa-solid fa-square-poll-horizontal"></i></span>You can day off
+        </p>
+        <h4 class="fw-bold">05/18</h4>
+        <p class="fs-16">You can day off 10 days more.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="card h-100 custome-box-shadow border-0">
+      <div class="card-body">
+        <p class="text-capitalize mb-4 fs-18"><span><i
+              class="text-success me-2 fs-18 fa-solid fa-briefcase"></i></span>Overtime Hour
+        </p>
+        <h4 class="fw-bold">20h</h4>
+        <p class="fs-16">Hours overtime this month.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="nav-container mb-4 mt-5">
+      <ul class="nav nav-pills" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="pills-leave-tab" data-bs-toggle="pill" data-bs-target="#pills-leave"
+            type="button" role="tab" aria-controls="pills-leave" aria-selected="true">Leave</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-overtime-tab" data-bs-toggle="pill" data-bs-target="#pills-overtime"
+            type="button" role="tab" aria-controls="pills-overtime" aria-selected="false">Overtime</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-12">
+    <div class="tab-content mt-5" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="pills-leave" role="tabpanel" aria-labelledby="pills-leave-tab"
+        tabindex="0">
+        <div class="row">
+          <div class="col-12">
+            <div class="d-flex justify-content-between align-items-start">
+              <p class="fs-20-bold mb-4 text-gray-600">Leave History</p>
+              <div class="filter-leave d-flex">
+                <button type="button" class="btn btn-primary me-3" data-bs-toggle="modal"
+                  data-bs-target="#requestLeave">
+                  Request Leave
+                </button>
+                <div class="position-relative">
+                  <input class="select-date" type="text" id="flatpickr" placeholder="Filter by date">
+                  <span class="arrow-down"><i class="fa-solid fa-chevron-down"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="table-container my-3">
+              <table id="leaveTable" class="listTable display my-4" cellspacing="0" width="100%">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Leave Type</th>
+                    <th>Duration</th>
+                    <th>Deduction</th>
+                    <th>Reason</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1111</td>
+                    <td>Annual</td>
+                    <td>2 days</td>
+                    <td>0.00$</td>
+                    <td>aaaaaaaaaaaaaaa</td>
+                    <td class="submit-status">Submitted</td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>Annual</td>
+                    <td>2 days</td>
+                    <td>0.00$</td>
+                    <td>aaaaaaaaaaaaaaa</td>
+                    <td class="submit-status">Submitted</td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>Annual</td>
+                    <td>2 days</td>
+                    <td>0.00$</td>
+                    <td>aaaaaaaaaaaaaaa</td>
+                    <td class="submit-status">Submitted</td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>Annual</td>
+                    <td>2 days</td>
+                    <td>0.00$</td>
+                    <td>aaaaaaaaaaaaaaa</td>
+                    <td class="submit-status">Submitted</td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>Annual</td>
+                    <td>2 days</td>
+                    <td>0.00$</td>
+                    <td>aaaaaaaaaaaaaaa</td>
+                    <td class="submit-status">Submitted</td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>Annual</td>
+                    <td>2 days</td>
+                    <td>0.00$</td>
+                    <td>aaaaaaaaaaaaaaa</td>
+                    <td class="submit-status">Submitted</td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>Annual</td>
+                    <td>2 days</td>
+                    <td>0.00$</td>
+                    <td>aaaaaaaaaaaaaaa</td>
+                    <td class="submit-status">Submitted</td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>Annual</td>
+                    <td>2 days</td>
+                    <td>0.00$</td>
+                    <td>aaaaaaaaaaaaaaa</td>
+                    <td class="submit-status">Submitted</td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>Annual</td>
+                    <td>2 days</td>
+                    <td>0.00$</td>
+                    <td>aaaaaaaaaaaaaaa</td>
+                    <td class="submit-status">Submitted</td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>Annual</td>
+                    <td>2 days</td>
+                    <td>0.00$</td>
+                    <td>aaaaaaaaaaaaaaa</td>
+                    <td class="submit-status">Submitted</td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>Annual</td>
+                    <td>2 days</td>
+                    <td>0.00$</td>
+                    <td>aaaaaaaaaaaaaaa</td>
+                    <td class="submit-status">Submitted</td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>Annual</td>
+                    <td>2 days</td>
+                    <td>0.00$</td>
+                    <td>aaaaaaaaaaaaaaa</td>
+                    <td class="submit-status">Submitted</td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>Annual</td>
+                    <td>2 days</td>
+                    <td>0.00$</td>
+                    <td>aaaaaaaaaaaaaaa</td>
+                    <td class="submit-status">Submitted</td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>Annual</td>
+                    <td>2 days</td>
+                    <td>0.00$</td>
+                    <td>aaaaaaaaaaaaaaa</td>
+                    <td class="submit-status">Submitted</td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>Annual</td>
+                    <td>2 days</td>
+                    <td>0.00$</td>
+                    <td>aaaaaaaaaaaaaaa</td>
+                    <td class="submit-status">Submitted</td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>Annual</td>
+                    <td>2 days</td>
+                    <td>0.00$</td>
+                    <td>aaaaaaaaaaaaaaa</td>
+                    <td class="submit-status">Submitted</td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>Annual</td>
+                    <td>2 days</td>
+                    <td>0.00$</td>
+                    <td>aaaaaaaaaaaaaaa</td>
+                    <td class="submit-status">Submitted</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <nav aria-label="Page navigation">
+              <ul id="pagination1" class="pagination">
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="pills-overtime" role="tabpanel" aria-labelledby="pills-overtime-tab" tabindex="0">
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="d-flex justify-content-between align-items-start">
+              <p class="fs-20-bold mb-4 text-gray-600">Overtime Request</p>
+              <div class="filter-leave d-flex">
+                <button type="button" class="btn btn-primary me-3" data-bs-toggle="modal" data-bs-target="#requestOT">
+                  Request OT
+                </button>
+                <div class="position-relative">
+                  <!-- <input class="select-date" type="text" id="flatpickr" placeholder="Filter by status"> -->
+                  <select class="form-select" style="width: 200px;" aria-label="Default select example">
+                    <option value="1" selected>All Status</option>
+                    <option value="2">Approved</option>
+                    <option value="3">Submitted</option>
+                    <option value="4">Rejected</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="table-container my-3">
+              <table id="OtTable" class="listTable display my-4" cellspacing="0" width="100%">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Start/End Hour</th>
+                    <th>Overtime Hours</th>
+                    <th>Status</th>
+                    <th>Overtime Pay</th>
+                    <th>Reason</th>
+                    <th>Detail</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1111</td>
+                    <td>6:00 PM - 10:00 PM</td>
+                    <td>3 hours</td>
+                    <td><span class="overtime-status submit">Submitted</span></td>
+                    <td>0.00$</td>
+                    <td>Annual</td>
+                    <td class=""><Button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                        data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></Button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>6:00 PM - 10:00 PM</td>
+                    <td>3 hours</td>
+                    <td><span class="overtime-status">Approved</span></td>
+                    <td>10.00$</td>
+                    <td>Annual</td>
+                    <td class=""><Button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                        data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></Button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>6:00 PM - 10:00 PM</td>
+                    <td>3 hours</td>
+                    <td><span class="overtime-status reject">Rejected</span></td>
+                    <td>0.00$</td>
+                    <td>Annual</td>
+                    <td class=""><Button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                        data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></Button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>6:00 PM - 10:00 PM</td>
+                    <td>3 hours</td>
+                    <td><span class="overtime-status reject">Rejected</span></td>
+                    <td>0.00$</td>
+                    <td>Annual</td>
+                    <td class=""><Button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                        data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></Button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>6:00 PM - 10:00 PM</td>
+                    <td>3 hours</td>
+                    <td><span class="overtime-status reject">Rejected</span></td>
+                    <td>0.00$</td>
+                    <td>Annual</td>
+                    <td class=""><Button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                        data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></Button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>6:00 PM - 10:00 PM</td>
+                    <td>3 hours</td>
+                    <td><span class="overtime-status reject">Rejected</span></td>
+                    <td>0.00$</td>
+                    <td>Annual</td>
+                    <td class=""><Button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                        data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></Button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>6:00 PM - 10:00 PM</td>
+                    <td>3 hours</td>
+                    <td><span class="overtime-status reject">Rejected</span></td>
+                    <td>0.00$</td>
+                    <td>Annual</td>
+                    <td class=""><Button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                        data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></Button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>6:00 PM - 10:00 PM</td>
+                    <td>3 hours</td>
+                    <td><span class="overtime-status reject">Rejected</span></td>
+                    <td>0.00$</td>
+                    <td>Annual</td>
+                    <td class=""><Button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                        data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></Button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>6:00 PM - 10:00 PM</td>
+                    <td>3 hours</td>
+                    <td><span class="overtime-status reject">Rejected</span></td>
+                    <td>0.00$</td>
+                    <td>Annual</td>
+                    <td class=""><Button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                        data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></Button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>6:00 PM - 10:00 PM</td>
+                    <td>3 hours</td>
+                    <td><span class="overtime-status reject">Rejected</span></td>
+                    <td>0.00$</td>
+                    <td>Annual</td>
+                    <td class=""><Button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                        data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></Button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>6:00 PM - 10:00 PM</td>
+                    <td>3 hours</td>
+                    <td><span class="overtime-status reject">Rejected</span></td>
+                    <td>0.00$</td>
+                    <td>Annual</td>
+                    <td class=""><Button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                        data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></Button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>6:00 PM - 10:00 PM</td>
+                    <td>3 hours</td>
+                    <td><span class="overtime-status reject">Rejected</span></td>
+                    <td>0.00$</td>
+                    <td>Annual</td>
+                    <td class=""><Button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                        data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></Button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>6:00 PM - 10:00 PM</td>
+                    <td>3 hours</td>
+                    <td><span class="overtime-status reject">Rejected</span></td>
+                    <td>0.00$</td>
+                    <td>Annual</td>
+                    <td class=""><Button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                        data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></Button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>6:00 PM - 10:00 PM</td>
+                    <td>3 hours</td>
+                    <td><span class="overtime-status reject">Rejected</span></td>
+                    <td>0.00$</td>
+                    <td>Annual</td>
+                    <td class=""><Button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                        data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></Button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>6:00 PM - 10:00 PM</td>
+                    <td>3 hours</td>
+                    <td><span class="overtime-status reject">Rejected</span></td>
+                    <td>0.00$</td>
+                    <td>Annual</td>
+                    <td class=""><Button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                        data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></Button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>6:00 PM - 10:00 PM</td>
+                    <td>3 hours</td>
+                    <td><span class="overtime-status reject">Rejected</span></td>
+                    <td>0.00$</td>
+                    <td>Annual</td>
+                    <td class=""><Button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                        data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></Button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>6:00 PM - 10:00 PM</td>
+                    <td>3 hours</td>
+                    <td><span class="overtime-status reject">Rejected</span></td>
+                    <td>0.00$</td>
+                    <td>Annual</td>
+                    <td class=""><Button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                        data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></Button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <nav aria-label="Page navigation">
+              <ul id="pagination2" class="pagination">
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Request Leave Modal -->
+
+  <div class="modal fade" id="requestLeave" tabindex="-1" aria-labelledby="requestLeaveLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content p-3">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-gray-600" id="requestLeaveLabel">Request Leave</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row">
+              <div class="col-4">
+                <div class="mb-3 position-relative">
+                  <label for="from-date" class="col-form-label">From Date:</label>
+                  <input type="text" class="form-control" id="flatpickr">
+                  <span class="calendar-date"><i class="fa-regular fa-calendar"></i></span>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="mb-3 position-relative">
+                  <label for="to-date" class="col-form-label">To Date:</label>
+                  <input class="form-control" id="flatpickr"></input>
+                  <span class="calendar-date"><i class="fa-regular fa-calendar"></i></span>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="mb-3 position-relative">
+                  <label for="half-day" class="col-form-label">Half Day:</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected disabled>Half Day</option>
+                    <option value="1">First Half</option>
+                    <option value="2">Second Half</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="mb-3">
+                  <label for="reason" class="form-label">Reason:</label>
+                  <textarea class="form-control" id="reason" rows="3"></textarea>
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="formFile" class="form-label">Upload File:</label>
+                <div class="mb-3 leave-file position-relative overflow-hidden">
+                  <div class="drop-file">
+                    <div class="wrape">
+                      <span><i class="fs-18 text-primary fa-solid fa-cloud-arrow-up"></i></span>
+                      <p class="fs-16 text-primary">Drag & drop to upload </p>
+                      <span class="text-info">or Browse</span>
+
+                      <div class="preview-file">
+                        <p>Show Selected File Here</p>
+                      </div>
+
+                    </div>
+                  </div>
+                  <input class="" type="file" id="" name="">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer d-flex justify-content-center">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Request OT Modal -->
+
+  <div class="modal fade" id="requestOT" tabindex="-1" aria-labelledby="requestLeaveLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content p-3">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-gray-600" id="requestLeaveLabel">Request Overtime</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mt-0 mb-5">Submit your overtime request here. Please make sure you have approval from your
+            supervisor.</p>
+          <form>
+            <div class="row">
+              <div class="col-12">
+                <div class="mb-3 position-relative">
+                  <label for="from-date" class="col-form-label">Date:</label>
+                  <input type="text" class="form-control" id="flatpickr">
+                  <span class="calendar-date"><i class="fa-regular fa-calendar"></i></span>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="mb-3">
+                  <label for="reason" class="form-label">Reason:</label>
+                  <textarea class="form-control" id="reason" rows="3"></textarea>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="mb-3 position-relative">
+                  <label for="half-day" class="col-form-label">Start Hour:</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected disabled>Start Hour</option>
+                    <option value="1">6:00 PM</option>
+                    <option value="2">6:30 PM</option>
+                    <option value="3">7:00 PM</option>
+                    <option value="4">7:30 PM</option>
+                    <option value="5">8:00 PM</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="mb-3 position-relative">
+                  <label for="half-day" class="col-form-label">End Hour:</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected disabled>End Hour</option>
+                    <option value="1">8:00 PM</option>
+                    <option value="2">8:30 PM</option>
+                    <option value="3">9:00 PM</option>
+                    <option value="4">9:30 PM</option>
+                    <option value="6">10:00 PM</option>
+                    <option value="5">10:30 PM</option>
+                    <option value="5">11:00 PM</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer d-flex justify-content-center">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Request Detail Modal -->
+
+  <div class="modal fade" id="otdetail" tabindex="-1" aria-labelledby="otdetailLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog">
+      <div class="modal-content p-3">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-gray-600" id="requestLeaveLabel">Overtime Request Detail</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mt-0 mb-5 text-gray-500">Submitted on 12/8/2024.</p>
+          <form>
+            <div class="row">
+              <div class="col-12">
+                <div class="card border-0 card-noshadow">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <div class="w-50">
+                        <h5 class="fs-18-bold text-gray-600">Date:</h5>
+                      </div>
+                      <div class="w-50">
+                        <p class="fs-18 text-gray-500">12/8/2024</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="card border-0 card-noshadow">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between">
+                        <div class="w-50">
+                          <h5 class="fs-18-bold text-gray-600">Hours:</h5>
+                        </div>
+                        <div class="w-50">
+                          <p class="fs-18 text-gray-500">4 Hours</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="card border-0 card-noshadow">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between">
+                        <div class="w-50">
+                          <h5 class="fs-18-bold text-gray-600">Status:</h5>
+                        </div>
+                        <div class="w-50">
+                          <p class="fs-18 overtime-status text-start">Approved</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="card border-0 card-noshadow">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between">
+                        <div class="w-50">
+                          <h5 class="fs-18-bold text-gray-600">Overtime Pay:</h5>
+                        </div>
+                        <div class="w-50">
+                          <p class="fs-18 text-gray-500">$15.00</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="card border-0 card-noshadow">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between">
+                        <div class="w-50">
+                          <h5 class="fs-18-bold text-gray-600 me-5">Reason:</h5>
+                        </div>
+                        <div class="w-50">
+                          <p class="fs-18 text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Pariatur a laborum odio nobis molestias nemo?</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer d-flex justify-content-center">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

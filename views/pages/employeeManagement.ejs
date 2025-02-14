@@ -1,0 +1,573 @@
+
+<div class="em-management row pb-5">
+    <!-- content header -->
+    <div class="col-12">
+        <div class="d-flex justify-content-between py-4">
+            <div>
+                <h3 class="main-font fw-bold">Employee</h3>
+                <p class="fs-6 mb-0">
+                    <span class="pe-2 text-primary" id="emNumber">100</span>
+                    Employees
+                </p>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary ">
+                    <a href="/addEmployee" class="nav-link text-white">
+                        <span><i class="fa-solid fa-user-plus"></i></span>
+                        Add Employee
+                    </a>
+                    
+                </button>
+                
+            </div>
+        </div>
+        
+    </div>
+    <!-- employee table -->
+    
+    <div class="my-4">
+        <div class="d-flex justify-content-between py-3 px-4 bg-white table-container-cus-2 border-bottom">
+            <div class="d-flex align-items-center gap-3">
+                <p class="text-gray-600 h5 fw-bold">Employees list</p>
+                <div class="serach-box-payroll d-flex ">
+                    <i class="fa-solid fa-magnifying-glass text-gray-600"></i>
+                    <input type="text" class="ms-2 search-box text-gray-500 w-100" placeholder="Search Employee Name">
+                </div>
+            </div>
+            <div class="d-flex align-items-center text-gray-600">
+                <i class="fa-solid fa-filter pe-2"></i>
+                <select class="border-0 pe-4 cursor-pointer" id="departmentFilter" name="departmentFilter" aria-label="Department Select" style="outline: none;">
+                    <option selected value="all">All Departments</option>
+                    <option value="webDev">Web Development</option>
+                    <option value="media">Media</option>
+                    <option value="frontEnd">Front-End</option>
+                    <option value="backend">Backend</option>
+
+                </select>
+                
+                                     
+            </div>
+        </div>
+        <div class="table-container table-container-cus">
+            <table id="salaryTable" class="display data-Table salaryTable">
+                <thead>
+                    <tr>
+                        
+                        <th id="employees-name" style="cursor: pointer;" class="d-flex align-items-center gap-3">
+                            <i class="fa-solid fa-sort"></i>
+                            <span>Employee Name</span>
+                        </th>
+                        <th>Employee ID</th>
+                        <th>Department</th>
+                        <th>Position</th>
+                        <th>Working Hour</th>
+                        <th>Leaves</th>
+                        <th>Hired Date</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="detail-attendance-em cursor-pointer">
+                        <td class="name-department-position">
+                            <div class="profile-em-payroll">
+                                <img src="upload/default.png" alt="Employee Image">
+                            </div>
+                            <div>
+                                <p class="text-gray-600 fs-16">Phan Lyhor</p>
+                                <p class="text-primary">lyhor@gmail.com</p>
+                            </div>
+                        </td>
+                        <td class="text-primary fs-6">#2025-0001</td>
+                        <td class="text-gray-600 department-name">Web Development </td>
+                        <td class="text-gray-600">UX/UI Designer </td>
+
+
+                        <td>
+                            <div class="d-flex">
+                                08:00 AM 
+                                <div class="d-flex align-items-center position-relative mx-3"> 
+                                    <div class="dot-con"></div> 
+                                    <div class="line-dot"></div>
+                                    <div class="dot-con-right"></div> 
+                                </div> 
+                                5:00 PM
+                            </div>
+                        </td>
+                        <td class="fs-6">
+                            <span class="text-gray-600 fs-5">5 </span>
+                            / 
+                            <span class="text-primary">18</span> 
+                        </td>
+                        <td><span class="ps-1">02-Jan-2025</span></td>
+                    </tr>
+                    <tr class="detail-attendance-em cursor-pointer">
+                        <td class="name-department-position">
+                            <div class="profile-em-payroll">
+                                <img src="upload/default.png" alt="Employee Image">
+                            </div>
+                            <div>
+                                <p class="text-gray-600 fs-16">Phan Lyhor</p>
+                                <p class="text-primary">lyhor@gmail.com</p>
+                            </div>
+                        </td>
+                        <td class="text-primary fs-6">#2025-0001</td>
+                        <td class="text-gray-600 department-name">Web Development </td>
+                        <td class="text-gray-600">UX/UI Designer </td>
+
+
+                        <td>
+                            <div class="d-flex">
+                                08:00 AM 
+                                <div class="d-flex align-items-center position-relative mx-3"> 
+                                    <div class="dot-con"></div> 
+                                    <div class="line-dot"></div>
+                                    <div class="dot-con-right"></div> 
+                                </div> 
+                                5:00 PM
+                            </div>
+                        </td>
+                        <td class="fs-6">
+                            <span class="text-gray-600 fs-5">5 </span>
+                            / 
+                            <span class="text-primary">18</span> 
+                        </td>
+                        <td><span class="ps-1">02-Jan-2025</span></td>
+                    </tr>                            
+                    <tr class="detail-attendance-em cursor-pointer">
+                        <td class="name-department-position">
+                            <div class="profile-em-payroll">
+                                <img src="upload/default.png" alt="Employee Image">
+                            </div>
+                            <div>
+                                <p class="text-gray-600 fs-16">Phan Lyhor</p>
+                                <p class="text-primary">lyhor@gmail.com</p>
+                            </div>
+                        </td>
+                        <td class="text-primary fs-6">#2025-0001</td>
+                        <td class="text-gray-600 department-name">Web Development </td>
+                        <td class="text-gray-600">UX/UI Designer </td>
+
+
+                        <td>
+                            <div class="d-flex">
+                                08:00 AM 
+                                <div class="d-flex align-items-center position-relative mx-3"> 
+                                    <div class="dot-con"></div> 
+                                    <div class="line-dot"></div>
+                                    <div class="dot-con-right"></div> 
+                                </div> 
+                                5:00 PM
+                            </div>
+                        </td>
+                        <td class="fs-6">
+                            <span class="text-gray-600 fs-5">5 </span>
+                            / 
+                            <span class="text-primary">18</span> 
+                        </td>
+                        <td><span class="ps-1">02-Jan-2025</span></td>
+                    </tr>                            
+                    <tr class="detail-attendance-em cursor-pointer">
+                        <td class="name-department-position">
+                            <div class="profile-em-payroll">
+                                <img src="upload/default.png" alt="Employee Image">
+                            </div>
+                            <div>
+                                <p class="text-gray-600 fs-16">Phan Lyhor</p>
+                                <p class="text-primary">lyhor@gmail.com</p>
+                            </div>
+                        </td>
+                        <td class="text-primary fs-6">#2025-0001</td>
+                        <td class="text-gray-600 department-name">Web Development </td>
+                        <td class="text-gray-600">UX/UI Designer </td>
+
+
+                        <td>
+                            <div class="d-flex">
+                                08:00 AM 
+                                <div class="d-flex align-items-center position-relative mx-3"> 
+                                    <div class="dot-con"></div> 
+                                    <div class="line-dot"></div>
+                                    <div class="dot-con-right"></div> 
+                                </div> 
+                                5:00 PM
+                            </div>
+                        </td>
+                        <td class="fs-6">
+                            <span class="text-gray-600 fs-5">5 </span>
+                            / 
+                            <span class="text-primary">18</span> 
+                        </td>
+                        <td><span class="ps-1">02-Jan-2025</span></td>
+                    </tr>                           
+                    <tr class="detail-attendance-em cursor-pointer">
+                        <td class="name-department-position">
+                            <div class="profile-em-payroll">
+                                <img src="upload/default.png" alt="Employee Image">
+                            </div>
+                            <div>
+                                <p class="text-gray-600 fs-16">Phan Lyhor</p>
+                                <p class="text-primary">lyhor@gmail.com</p>
+                            </div>
+                        </td>
+                        <td class="text-primary fs-6">#2025-0001</td>
+                        <td class="text-gray-600 department-name">Web Development </td>
+                        <td class="text-gray-600">UX/UI Designer </td>
+
+
+                        <td>
+                            <div class="d-flex">
+                                08:00 AM 
+                                <div class="d-flex align-items-center position-relative mx-3"> 
+                                    <div class="dot-con"></div> 
+                                    <div class="line-dot"></div>
+                                    <div class="dot-con-right"></div> 
+                                </div> 
+                                5:00 PM
+                            </div>
+                        </td>
+                        <td class="fs-6">
+                            <span class="text-gray-600 fs-5">5 </span>
+                            / 
+                            <span class="text-primary">18</span> 
+                        </td>
+                        <td><span class="ps-1">02-Jan-2025</span></td>
+                    </tr>                           
+                    <tr class="detail-attendance-em cursor-pointer">
+                        <td class="name-department-position">
+                            <div class="profile-em-payroll">
+                                <img src="upload/default.png" alt="Employee Image">
+                            </div>
+                            <div>
+                                <p class="text-gray-600 fs-16">Phan Lyhor</p>
+                                <p class="text-primary">lyhor@gmail.com</p>
+                            </div>
+                        </td>
+                        <td class="text-primary fs-6">#2025-0001</td>
+                        <td class="text-gray-600 department-name">Web Development </td>
+                        <td class="text-gray-600">UX/UI Designer </td>
+
+
+                        <td>
+                            <div class="d-flex">
+                                08:00 AM 
+                                <div class="d-flex align-items-center position-relative mx-3"> 
+                                    <div class="dot-con"></div> 
+                                    <div class="line-dot"></div>
+                                    <div class="dot-con-right"></div> 
+                                </div> 
+                                5:00 PM
+                            </div>
+                        </td>
+                        <td class="fs-6">
+                            <span class="text-gray-600 fs-5">5 </span>
+                            / 
+                            <span class="text-primary">18</span> 
+                        </td>
+                        <td><span class="ps-1">02-Jan-2025</span></td>
+                    </tr>                           
+                    <tr class="detail-attendance-em cursor-pointer">
+                        <td class="name-department-position">
+                            <div class="profile-em-payroll">
+                                <img src="upload/default.png" alt="Employee Image">
+                            </div>
+                            <div>
+                                <p class="text-gray-600 fs-16">Phan Lyhor</p>
+                                <p class="text-primary">lyhor@gmail.com</p>
+                            </div>
+                        </td>
+                        <td class="text-primary fs-6">#2025-0001</td>
+                        <td class="text-gray-600 department-name">Web Development </td>
+                        <td class="text-gray-600">UX/UI Designer </td>
+
+
+                        <td>
+                            <div class="d-flex">
+                                08:00 AM 
+                                <div class="d-flex align-items-center position-relative mx-3"> 
+                                    <div class="dot-con"></div> 
+                                    <div class="line-dot"></div>
+                                    <div class="dot-con-right"></div> 
+                                </div> 
+                                5:00 PM
+                            </div>
+                        </td>
+                        <td class="fs-6">
+                            <span class="text-gray-600 fs-5">5 </span>
+                            / 
+                            <span class="text-primary">18</span> 
+                        </td>
+                        <td><span class="ps-1">02-Jan-2025</span></td>
+                    </tr>  
+                    <tr class="detail-attendance-em cursor-pointer">
+                        <td class="name-department-position">
+                            <div class="profile-em-payroll">
+                                <img src="upload/default.png" alt="Employee Image">
+                            </div>
+                            <div>
+                                <p class="text-gray-600 fs-16">Phan Lyhor</p>
+                                <p class="text-primary">lyhor@gmail.com</p>
+                            </div>
+                        </td>
+                        <td class="text-primary fs-6">#2025-0001</td>
+                        <td class="text-gray-600 department-name">Web Development </td>
+                        <td class="text-gray-600">UX/UI Designer </td>
+
+
+                        <td>
+                            <div class="d-flex">
+                                08:00 AM 
+                                <div class="d-flex align-items-center position-relative mx-3"> 
+                                    <div class="dot-con"></div> 
+                                    <div class="line-dot"></div>
+                                    <div class="dot-con-right"></div> 
+                                </div> 
+                                5:00 PM
+                            </div>
+                        </td>
+                        <td class="fs-6">
+                            <span class="text-gray-600 fs-5">5 </span>
+                            / 
+                            <span class="text-primary">18</span> 
+                        </td>
+                        <td><span class="ps-1">02-Jan-2025</span></td>
+                    </tr>                           
+                    <tr class="detail-attendance-em cursor-pointer">
+                        <td class="name-department-position">
+                            <div class="profile-em-payroll">
+                                <img src="upload/default.png" alt="Employee Image">
+                            </div>
+                            <div>
+                                <p class="text-gray-600 fs-16">Phan Lyhor</p>
+                                <p class="text-primary">lyhor@gmail.com</p>
+                            </div>
+                        </td>
+                        <td class="text-primary fs-6">#2025-0001</td>
+                        <td class="text-gray-600 department-name">Web Development </td>
+                        <td class="text-gray-600">UX/UI Designer </td>
+
+
+                        <td>
+                            <div class="d-flex">
+                                08:00 AM 
+                                <div class="d-flex align-items-center position-relative mx-3"> 
+                                    <div class="dot-con"></div> 
+                                    <div class="line-dot"></div>
+                                    <div class="dot-con-right"></div> 
+                                </div> 
+                                5:00 PM
+                            </div>
+                        </td>
+                        <td class="fs-6">
+                            <span class="text-gray-600 fs-5">5 </span>
+                            / 
+                            <span class="text-primary">18</span> 
+                        </td>
+                        <td><span class="ps-1">02-Jan-2025</span></td>
+                    </tr>                           
+                    <tr class="detail-attendance-em cursor-pointer">
+                        <td class="name-department-position">
+                            <div class="profile-em-payroll">
+                                <img src="upload/default.png" alt="Employee Image">
+                            </div>
+                            <div>
+                                <p class="text-gray-600 fs-16">Phan Lyhor</p>
+                                <p class="text-primary">lyhor@gmail.com</p>
+                            </div>
+                        </td>
+                        <td class="text-primary fs-6">#2025-0001</td>
+                        <td class="text-gray-600 department-name">Web Development </td>
+                        <td class="text-gray-600">UX/UI Designer </td>
+
+
+                        <td>
+                            <div class="d-flex">
+                                08:00 AM 
+                                <div class="d-flex align-items-center position-relative mx-3"> 
+                                    <div class="dot-con"></div> 
+                                    <div class="line-dot"></div>
+                                    <div class="dot-con-right"></div> 
+                                </div> 
+                                5:00 PM
+                            </div>
+                        </td>
+                        <td class="fs-6">
+                            <span class="text-gray-600 fs-5">5 </span>
+                            / 
+                            <span class="text-primary">18</span> 
+                        </td>
+                        <td><span class="ps-1">02-Jan-2025</span></td>
+                    </tr>                           
+                    <tr class="detail-attendance-em cursor-pointer">
+                        <td class="name-department-position">
+                            <div class="profile-em-payroll">
+                                <img src="upload/default.png" alt="Employee Image">
+                            </div>
+                            <div>
+                                <p class="text-gray-600 fs-16">Phan Lyhor</p>
+                                <p class="text-primary">lyhor@gmail.com</p>
+                            </div>
+                        </td>
+                        <td class="text-primary fs-6">#2025-0001</td>
+                        <td class="text-gray-600 department-name">Web Development </td>
+                        <td class="text-gray-600">UX/UI Designer </td>
+
+
+                        <td>
+                            <div class="d-flex">
+                                08:00 AM 
+                                <div class="d-flex align-items-center position-relative mx-3"> 
+                                    <div class="dot-con"></div> 
+                                    <div class="line-dot"></div>
+                                    <div class="dot-con-right"></div> 
+                                </div> 
+                                5:00 PM
+                            </div>
+                        </td>
+                        <td class="fs-6">
+                            <span class="text-gray-600 fs-5">5 </span>
+                            / 
+                            <span class="text-primary">18</span> 
+                        </td>
+                        <td><span class="ps-1">02-Jan-2025</span></td>
+                    </tr>     
+                    <tr class="detail-attendance-em cursor-pointer">
+                        <td class="name-department-position">
+                            <div class="profile-em-payroll">
+                                <img src="upload/default.png" alt="Employee Image">
+                            </div>
+                            <div>
+                                <p class="text-gray-600 fs-16">Phan Lyhor</p>
+                                <p class="text-primary">lyhor@gmail.com</p>
+                            </div>
+                        </td>
+                        <td class="text-primary fs-6">#2025-0001</td>
+                        <td class="text-gray-600 department-name">Web Development </td>
+                        <td class="text-gray-600">UX/UI Designer </td>
+
+
+                        <td>
+                            <div class="d-flex">
+                                08:00 AM 
+                                <div class="d-flex align-items-center position-relative mx-3"> 
+                                    <div class="dot-con"></div> 
+                                    <div class="line-dot"></div>
+                                    <div class="dot-con-right"></div> 
+                                </div> 
+                                5:00 PM
+                            </div>
+                        </td>
+                        <td class="fs-6">
+                            <span class="text-gray-600 fs-5">5 </span>
+                            / 
+                            <span class="text-primary">18</span> 
+                        </td>
+                        <td><span class="ps-1">02-Jan-2025</span></td>
+                    </tr>                           
+                    <tr class="detail-attendance-em cursor-pointer">
+                        <td class="name-department-position">
+                            <div class="profile-em-payroll">
+                                <img src="upload/default.png" alt="Employee Image">
+                            </div>
+                            <div>
+                                <p class="text-gray-600 fs-16">Phan Lyhor</p>
+                                <p class="text-primary">lyhor@gmail.com</p>
+                            </div>
+                        </td>
+                        <td class="text-primary fs-6">#2025-0001</td>
+                        <td class="text-gray-600 department-name">Web Development </td>
+                        <td class="text-gray-600">UX/UI Designer </td>
+
+
+                        <td>
+                            <div class="d-flex">
+                                08:00 AM 
+                                <div class="d-flex align-items-center position-relative mx-3"> 
+                                    <div class="dot-con"></div> 
+                                    <div class="line-dot"></div>
+                                    <div class="dot-con-right"></div> 
+                                </div> 
+                                5:00 PM
+                            </div>
+                        </td>
+                        <td class="fs-6">
+                            <span class="text-gray-600 fs-5">5 </span>
+                            / 
+                            <span class="text-primary">18</span> 
+                        </td>
+                        <td><span class="ps-1">02-Jan-2025</span></td>
+                    </tr>                           
+                    <tr class="detail-attendance-em cursor-pointer">
+                        <td class="name-department-position">
+                            <div class="profile-em-payroll">
+                                <img src="upload/default.png" alt="Employee Image">
+                            </div>
+                            <div>
+                                <p class="text-gray-600 fs-16">Phan Lyhor</p>
+                                <p class="text-primary">lyhor@gmail.com</p>
+                            </div>
+                        </td>
+                        <td class="text-primary fs-6">#2025-0001</td>
+                        <td class="text-gray-600 department-name">Web Development </td>
+                        <td class="text-gray-600">UX/UI Designer </td>
+
+
+                        <td>
+                            <div class="d-flex">
+                                08:00 AM 
+                                <div class="d-flex align-items-center position-relative mx-3"> 
+                                    <div class="dot-con"></div> 
+                                    <div class="line-dot"></div>
+                                    <div class="dot-con-right"></div> 
+                                </div> 
+                                5:00 PM
+                            </div>
+                        </td>
+                        <td class="fs-6">
+                            <span class="text-gray-600 fs-5">5 </span>
+                            / 
+                            <span class="text-primary">18</span> 
+                        </td>
+                        <td><span class="ps-1">02-Jan-2025</span></td>
+                    </tr>                            
+                </tbody>
+            </table>
+        </div>
+        <nav aria-label="Page navigation">
+            <ul id="pagination" class="pagination">
+            </ul>
+        </nav>
+        <!-- Modal -->
+        <div class="modal fade" id="emDetailModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="emDetailModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-title d-flex align-item-center fs-5" id="emDetailModalLabel">
+                            <img src="upload/default.png" id="modalEmployeeImage" class="em-profile-modal" alt="Employee Profile">
+                            <div class="ps-2">
+                                <p id="modalEmployeeName" class="main-font">Phan Lyhor</p>
+                                <p id="modalEmployeeEmailDisplay" class="text-primary">lyhor@gmail.com</p>
+                            </div>
+                            
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="modalEmployeeEmail">Email: </p> 
+                        <p id="modalEmployeeDepartment">Department: </p> 
+                        <p id="modalEmployeePosition">Position: </p> 
+                        <p id="modalEmployeeHiredDate">Hired Date: </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Understood</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div> 
+
+</div>
+
+
+

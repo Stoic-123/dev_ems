@@ -1,0 +1,287 @@
+
+<div>
+    <div class="my-4">
+            <!-- Profile Header -->
+            <div class="profile-header mb-4 rounded-8">
+                <div class="d-flex align-items-center">
+                    <img src="upload/default.png" alt="Profile" class="profile-pic me-3">
+                    <div>
+                        <h5 class="mb-0 fs-18-bold text-gray-600">Han Samsong</h5>
+                        <p class="fs-16 text-gray-500 mt-2 fw-bold text-primary">Active</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="nav-container mb-4">
+                <ul class="nav nav-pills px-0" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active fs-16" id="pills-detail-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-detail-information" type="button" role="tab" aria-controls="pills-detail-information"
+                            aria-selected="true">Detail Information</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link fs-16" id="pills-document-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-document" type="button" role="tab" aria-controls="pills-document"
+                            aria-selected="false">Document</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link fs-16" id="pills-security-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-security" type="button" role="tab" aria-controls="pills-security"
+                            aria-selected="false">Security</button>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-detail-information" role="tabpanel" aria-labelledby="pills-detail-tab">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="contact-info custome-box-shadow p-3 h-100">
+                                <p class="h5">Personal Information</p>
+                                <hr>
+                                <div class="row info-row gy-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="info-label">First Name</div>
+                                        <div class="info-value">Samsong</div>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="info-label">Last Name</div>
+                                        <div class="info-value">Han</div>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="info-label">Gender</div>
+                                        <div class="info-value">Male</div>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="info-label">Date Of Birth</div>
+                                        <div class="info-value">11/11/1999</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="contact-info custome-box-shadow p-3">
+                                <p class="h5">employment Information</p>
+                                <hr>
+                                <div class="row info-row gy-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="info-label">Basic Salary</div>
+                                        <div class="info-value">$599.00</div>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="info-label">Working hours</div>
+                                        <div class="info-value">40 H</div>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="info-label">Position</div>
+                                        <div class="info-value">Front-End Developer</div>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="info-label">Department</div>
+                                        <div class="info-value">Web Development</div>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="info-label">Employment Type</div>
+                                        <div class="info-value">Full-time</div>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="info-label">Hired Date</div>
+                                        <div class="info-value">01 January 2022</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="contact-info custome-box-shadow p-3 h-100">
+                                <p class=" h5">Contact Information</p>
+                                <hr>
+                                <div class="row info-row gy-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="info-label">Phone Number</div>
+                                        <div class="info-value">0123456789</div>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="info-label">Email</div>
+                                        <div class="info-value">123@gmail.com</div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="info-label">Address</div>
+                                        <div class="info-value">st 123, 456, ToulKork, Phnom Penh</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-document" role="tabpanel" aria-labelledby="pills-document-tab">
+                    <div class="document-list">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h5 class="mb-0">Document</h5>
+                            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addDocumentModal">
+                                Add Document
+                            </button>
+                        </div>
+                        <hr>
+                        <p class="fs-18-bold mb-2">Contact</p>
+                        <div class="document-item d-flex justify-content-between align-items-center">
+                            <p class="fs-18-bold text-primary">Cv.pdf</p>
+                            <div>
+                                <button class="btn btn-link p-0 me-2" data-bs-toggle="modal" data-bs-target="#updateDocumentModal">
+                                    <i class="fa-regular fa-pen-to-square h5 text-warning pb-0 mb-0"></i>
+                                </button>
+                                <button class="btn btn-link p-0 delete-btn">
+                                    <i class="fa-regular fa-trash-can h5 text-danger pb-0 mb-0"></i>
+                                </button>                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add Document Modal -->
+                    <div class="modal fade" id="addDocumentModal" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <p class="modal-title h4 fw-bold">Add Document</p>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <p class=" fs-16">Document Description:</p>
+                                            <input type="text" class="form-control mt-2" placeholder="Contract">
+                                        </div>
+                                        <div class="mb-3">
+                                            <p class="fs-16">Upload File:</p>
+                                            <label for="fileInput" class="upload-area w-100 mt-2">
+                                                <input type="file" id="fileInput" class="d-none">
+                                                <div class="upload-icon">☁️</div>
+                                                <p class="mb-0">Drag & drop to upload</p>
+                                                <p class="text-primary mb-0">or browse</p>
+                                            </label>                                                                              
+                                        </div>
+                                        <div class="text-end">
+                                            <button type="button" class="btn btn-secondary me-2 px-4" data-bs-dismiss="modal">Cancel</button>
+                                            <button type="submit" class="btn btn-primary px-4">Save</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Update Document Modal -->
+                     <div class="modal fade" id="updateDocumentModal" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <p class="modal-title h4 fw-bold">Update Document</p>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <p class=" fs-16">Document Description:</p>
+                                            <input type="text" class="form-control mt-2" placeholder="Contract">
+                                        </div>
+                                        <div class="mb-3">
+                                            <p class="fs-16">Upload File:</p>
+                                            <label for="fileInput" class="upload-area w-100 mt-2">
+                                                <input type="file" id="fileInput" class="d-none">
+                                                <div class="upload-icon">☁️</div>
+                                                <p class="mb-0">Drag & drop to upload</p>
+                                                <p class="text-primary mb-0">or browse</p>
+                                            </label>                                                                              
+                                        </div>
+                                        <div class="text-end">
+                                            <button type="button" class="btn btn-secondary me-2 px-4" data-bs-dismiss="modal">Cancel</button>
+                                            <button type="submit" class="btn btn-primary px-4">Save</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-security" role="tabpanel" aria-labelledby="pills-security-tab">
+                    <div class="form-container">
+                        <p class="mb-4 h4 fw-bold text-gray-600">Change Password</p>
+                        <form id="changePasswordForm">
+                            <div class="mb-3">
+                                <label for="currentPassword" class="form-label">Current Password</label>
+                                <div class="password-input-group position-relative">
+                                    <input type="password" class="form-control" id="currentPassword" required>
+                                    <button type="button" class="password-toggle position-absolute end-0 top-50 translate-middle-y border-0 bg-transparent p-2 pe-3" 
+                                        aria-label="Toggle password visibility">
+                                        <i class="fa-solid fa-eye-slash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="newPassword" class="form-label">New Password</label>
+                                <div class="password-input-group position-relative">
+                                    <input type="password" class="form-control" id="newPassword" required>
+                                    <button type="button" class="password-toggle position-absolute end-0 top-50 translate-middle-y border-0 bg-transparent p-2 pe-3" 
+                                        aria-label="Toggle password visibility">
+                                        <i class="fa-solid fa-eye-slash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                                <div class="password-input-group position-relative">
+                                    <input type="password" class="form-control" id="confirmPassword" required>
+                                    <button type="button" class="password-toggle position-absolute end-0 top-50 translate-middle-y border-0 bg-transparent p-2 pe-3" 
+                                        aria-label="Toggle password visibility">
+                                        <i class="fa-solid fa-eye-slash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <button type="submit" class="btn btn-primary px-4">Change Password</button>
+                                <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#resetRequestModal">
+                                    Forgot Password?
+                                </a>
+                            </div>
+                        </form>
+                        
+                    </div>
+
+                    <!-- Password Reset Request Modal -->
+                    <div class="modal fade" id="resetRequestModal" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Password Reset Request Form</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="text-muted small mb-3">By submitting this form, you acknowledge that your request will be sent to HR for verification.</p>
+                                    <form id="resetRequestForm">
+                                        <div class="mb-3">
+                                            <label class="form-label">Employee ID</label>
+                                            <input type="text" class="form-control" placeholder="000001" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Position</label>
+                                            <input type="text" class="form-control" placeholder="UX/UI" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Subject</label>
+                                            <input type="text" class="form-control" value="Password Change Request" required>
+                                        </div>
+                                        <div class="text-end">
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+    </div>
+</div>

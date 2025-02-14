@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+</head>
+<body class="bg-color login-bg">
+
+    <div class="container d-flex justify-content-center align-items-center h-100">
+        <div class="login-card p-5">
+            <div class="company-logo w-100 d-flex justify-content-center">
+                <img src="/upload/default-logo.png" class="card-img-top" alt="company profile">
+            </div>
+            <h4 class="company-name text-center mt-3 mb-0">ANT Training Center</h4>
+            <p class="text-center pt-2">Log in to your account</p>
+            <form acction=""  class="pt-3" method="post" enctype="application/x-www-form-urlencoded">
+                <div class="mb-3 position-relative">
+                    <label for="username" class="form-label fs-6">Username</label>
+                    <input class="form-control ps-5" id="username" type="text" placeholder="Enter your username" aria-label="">
+                    <div class="user-icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <p id="message-error-username" class="message-error clear-message"></p>
+                </div>
+                <div class="mb-3 position-relative">
+                    <label for="password" class="form-label fs-6">Password</label>
+                    <input class="form-control ps-5" id="password" type="password" placeholder="Enter your password" aria-label="">
+                    <div class="pw-icon">
+                        <i class="fa-solid fa-key"></i>
+                    </div>
+                    <div class="eye-icon" id="hidePw">
+                        <i class="fa-solid fa-eye-slash" id="eyeIcon"></i>
+                    </div>
+                    <p id="message-error-password" class="message-error"></p>
+                </div>
+                <div class="w-100 d-flex justify-content-center pt-4">
+                    <button type="submit" class="btn login-btn px-3" id="loginbtn">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+    <script src="assets/js/auth.js"></script>
+    <script src="vendor/fontawesome/js/all.min.js"></script>
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

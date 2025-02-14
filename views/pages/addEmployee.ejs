@@ -1,0 +1,133 @@
+<div class="add-employee pt-4 pb-5">
+    <div class="back-link">
+        <a href="/employee" class="nav-link d-flex align-items-end">
+            <span class="text-primary ps-2 pe-3"><i class="fa-solid fa-arrow-left"></i></span>
+            <p class="text-primary">Back</p>
+            
+        </a>
+    </div>
+    <h3 class="py-4">Add Employee</h3>
+
+    <div class="form-card">
+        <form action="#">
+            <div class="card d-flex px-5 py-4">
+                <div class="row">
+                    <!-- basic info -->
+                    <div class="col-12">
+                        <p class="mb-0 pt-2 main-font text-primary">Basic Information</p>
+                        <hr>
+                    </div>
+                    
+                    <div class="col-2">
+                        <div class="position-relative">
+                            <img src="upload/default.png" class="add-profile" alt="profile image">
+                            <div class="file-input">
+                                <input type="file" class="d-hide" name="emProfile" id="emProfile">
+                                <label for="emProfile" class="em-profile-label add-icon">
+                                    <i class="fa-duotone fa-solid fa-camera fs-5"></i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-10 d-flex flex-wrap">
+                        <div class="mb-3 w-50">
+                            <label for="firstname" class="form-label">First name</label>
+                            <input class="form-control" id="firstname" type="text" placeholder="First name" aria-label="">
+                        </div>
+                        <div class="mb-3 w-50">
+                            <label for="lastname" class="form-label">Last name</label>
+                            <input class="form-control" id="lastname" type="text" placeholder="Last name" aria-label="">
+                        </div>
+                        <div class="mb-3 w-50 select">
+                            <label for="gender" class="form-label">Gender</label>
+                            <select class="form-select select-gender" id="gender" name="gender" aria-label="Gender Select">
+                                <option selected value="Male">Male</option>
+                                <option value="1">Female</option>
+                                
+                            </select>
+                        </div>
+                        <div class="mb-3 w-50 position-relative">
+                            <label for="dob" class="form-label">Date of birth</label>
+
+                            <input type="text" class="form-control dob-input" id="dob" value="11-Jan-1999" data-input>
+                            <label for="dob" class="position-absolute date-icon">
+                                <i class="fa-duotone fa-light fa-calendar-days fs-5"></i>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- employment info -->
+                    <p class="mb-0 pt-5 main-font text-primary">Employment Information</p>
+                    <hr>
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="editBasicSalary" class="form-label">First Name</label>
+                            <input class="form-control" id="editBasicSalary" type="text" value="$599.00" aria-label="">
+                        </div>
+                    </div>
+                    
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="editPosition" class="form-label">Position</label>
+                            <input class="form-control" id="editPosition" type="text" value="Front-End Developer" aria-label="">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-3 select">
+                            <label for="editDepartment" class="form-label">Department</label>
+                            <select class="form-select" id="editDepartment" name="editDepartment" aria-label="Department Select">
+                                <option selected value="IT">IT</option>
+                                <option value="Fin">Finance</option>
+                                <option value="HR">HR</option>
+                                
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-3 select">
+                            <label for="editEmType" class="form-label">Employment Type</label>
+                            <select class="form-select" id="editEmType" name="editEmType" aria-label="Employment Type Select">
+                                <option selected value="fullTime">Full-Time</option>
+                                <option value="partTime">Part-Time</option>
+                                
+                            </select>
+                        </div>
+                    </div>
+                    
+
+                    <!-- contact info -->
+                    <p class="mb-0 pt-5 main-font text-primary">Contact Information</p>
+                    <hr>
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="editPhoneNumber" class="form-label">Phone Number</label>
+                            <input class="form-control" name="editPhoneNumberr" id="editPhoneNumber" type="text" value="0123456789" aria-label=""> 
+                        </div>
+                        
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="editEmail" class="form-label">Email</label>
+                            <input class="form-control" id="editEmail" type="email" value="123@gmail.com" aria-label="">
+                        </div>
+                        
+                    </div>
+                    <div class="col-12">
+                        <div class="mb-3">
+                            <label for="editAddress" class="form-label">Address</label>
+                            <input class="form-control" id="editAddress" type="text" value="st 123, 456, ToulKork, Phnom Penh" aria-label="">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="d-flex justify-content-end mt-3">
+                    <button type="submit" class="btn btn-primary fs-6 px-5">Add</button>
+    
+                </div>
+            </div>
+            
+        </form>
+    </div>
+</div>
+
+<script src="assets/js/emManagement.js"></script>

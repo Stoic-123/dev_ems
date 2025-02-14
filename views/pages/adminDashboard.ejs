@@ -1,0 +1,370 @@
+
+<div class="content-head w-100 py-4 d-flex justify-content-between align-items-center">
+    <h4>Welcome back, <span class="text-primary ps-2">Lyhor !</span></h4>
+    <button type="button" class="btn btn-primary px-3 py-2">
+        <a href="#" class="nav-link text-white">
+            <i class="fa-solid fa-qrcode"></i>
+            <span class="ps-2">Generate Attendance QR Code</span>
+        </a>
+    </button>
+</div>
+
+<section class="admin-overview py-4">
+    <h5 class="text-primary pb-3">Overview</h5>
+    <div class="card admin-overview-card rounded-3 p-4 bg-white">
+        <div class="overview-header d-flex justify-content-start px-2">
+            <p class="fw-bold overview-title pb-2 px-3">Attendance</p>
+            <hr class="text-gray-500 w-100">
+        </div>
+        <div class="w-100 d-flex justify-content-center">
+            <div class="chart-wrapper py-3">
+                <canvas id="attChart" class="overview-chart" ></canvas>
+
+            </div>
+            
+        </div>
+        <div class="chart-label pt-4">
+            <p class="text-center">Percentage of employees at office this week</p>
+        </div>
+    </div>
+    
+    <div class="att-overview py-4">
+        <ul class="nav nav-underline">
+            <li class="nav-item">
+              <button class="nav-link px-3 active" id="today-tab" data-bs-toggle="tab" data-bs-target="#today-tab-pane" type="button" role="tab" aria-controls="today-tab" aria-selected="true">Today</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link px-3" id="week-tab" data-bs-toggle="tab" data-bs-target="#week-tab-pane" type="button" role="tab" aria-controls="week-tab" aria-selected="true">Week</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link px-3" id="month-tab" data-bs-toggle="tab" data-bs-target="#month-tab-pane" type="button" role="tab" aria-controls="month-tab" aria-selected="true">Month</button>
+            </li>
+            
+        </ul>
+        <div class="tab-content pt-4" id="myTabContent">
+            <div class="tab-pane fade show active" id="today-tab-pane" role="tabpanel" aria-labelledby="today-tab" tabindex="0">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="card p-4">
+                            <div class="d-flex align-items-center">
+                                <div class="att-overview-icon text-center py-4 bg-primary text-white rounded-3">
+                                    <i class="fa-solid fa-building fs-2"></i>
+                                </div>
+                                <div class="att-overview-data">
+                                    <p class="fs-2 fw-bold text-center">3</p>
+                                    <p class="fs-5 text-center">departments</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card p-4">
+                            <div class="d-flex align-items-center">
+                                <div class="att-overview-icon text-center py-4 bg-primary text-white rounded-3">
+                                    <i class="fa-solid fa-users-line fs-2"></i>
+                                </div>
+                                <div class="att-overview-data">
+                                    <p class="fs-2 fw-bold text-center">100</p>
+                                    <p class="fs-5 text-center">employees</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card p-4">
+                            <div class="d-flex align-items-center">
+                                <div class="att-overview-icon text-center py-4 bg-primary text-white rounded-3">
+                                    <i class="fa-solid fa-user-clock fs-2"></i>
+                                </div>
+                                <div class="att-overview-data">
+                                    <p class="fs-2 fw-bold text-center">3</p>
+                                    <p class="fs-5 text-center">on leave</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card p-4">
+                            <div class="d-flex align-items-center">
+                                <div class="att-overview-icon text-center py-4 bg-primary text-white rounded-3">
+                                    <i class="fa-solid fa-building-user fs-2"></i>
+                                </div>
+                                <div class="att-overview-data">
+                                    <p class="fs-2 fw-bold text-center">97</p>
+                                    <p class="fs-5 text-center">at office</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="week-tab-pane" role="tabpanel" aria-labelledby="week-tab" tabindex="0">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="card p-4">
+                            <div class="d-flex align-items-center">
+                                <div class="att-overview-icon text-center py-4 bg-primary text-white rounded-3">
+                                    <i class="fa-solid fa-building fs-2"></i>
+                                </div>
+                                <div class="att-overview-data">
+                                    <p class="fs-2 fw-bold text-center">3</p>
+                                    <p class="fs-5 text-center">departments</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card p-4">
+                            <div class="d-flex align-items-center">
+                                <div class="att-overview-icon text-center py-4 bg-primary text-white rounded-3">
+                                    <i class="fa-solid fa-users-line fs-2"></i>
+                                </div>
+                                <div class="att-overview-data">
+                                    <p class="fs-2 fw-bold text-center">100</p>
+                                    <p class="fs-5 text-center">employees</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card p-4">
+                            <div class="d-flex align-items-center">
+                                <div class="att-overview-icon text-center py-4 bg-primary text-white rounded-3">
+                                    <i class="fa-solid fa-user-clock fs-2"></i>
+                                </div>
+                                <div class="att-overview-data">
+                                    <p class="fs-2 fw-bold text-center">5</p>
+                                    <p class="fs-5 text-center">on leave</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card p-4">
+                            <div class="d-flex align-items-center">
+                                <div class="att-overview-icon text-center py-4 bg-primary text-white rounded-3">
+                                    <i class="fa-solid fa-building-user fs-2"></i>
+                                </div>
+                                <div class="att-overview-data">
+                                    <p class="fs-2 fw-bold text-center">97</p>
+                                    <p class="fs-5 text-center">at office</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="month-tab-pane" role="tabpanel" aria-labelledby="month-tab" tabindex="0">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="card p-4">
+                            <div class="d-flex align-items-center">
+                                <div class="att-overview-icon text-center py-4 bg-primary text-white rounded-3">
+                                    <i class="fa-solid fa-building fs-2"></i>
+                                </div>
+                                <div class="att-overview-data">
+                                    <p class="fs-2 fw-bold text-center">3</p>
+                                    <p class="fs-5 text-center">departments</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card p-4">
+                            <div class="d-flex align-items-center">
+                                <div class="att-overview-icon text-center py-4 bg-primary text-white rounded-3">
+                                    <i class="fa-solid fa-users-line fs-2"></i>
+                                </div>
+                                <div class="att-overview-data">
+                                    <p class="fs-2 fw-bold text-center">100</p>
+                                    <p class="fs-5 text-center">employees</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card p-4">
+                            <div class="d-flex align-items-center">
+                                <div class="att-overview-icon text-center py-4 bg-primary text-white rounded-3">
+                                    <i class="fa-solid fa-user-clock fs-2"></i>
+                                </div>
+                                <div class="att-overview-data">
+                                    <p class="fs-2 fw-bold text-center">3</p>
+                                    <p class="fs-5 text-center">on leave</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card p-4">
+                            <div class="d-flex align-items-center">
+                                <div class="att-overview-icon text-center py-4 bg-primary text-white rounded-3">
+                                    <i class="fa-solid fa-building-user fs-2"></i>
+                                </div>
+                                <div class="att-overview-data">
+                                    <p class="fs-2 fw-bold text-center">97</p>
+                                    <p class="fs-5 text-center">at office</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="request-overview py-4">
+        <h5 class="text-primary pb-3">Requests</h5>
+        <div class="row">
+            <div class="col-6">
+                <div class="card request-ov-card p-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex">
+                            <p class="p-2 bg-sidebar-hover rounded-3">
+                                <i class="fa-regular fa-clock fs-5 text-primary"></i>
+                            </p>
+                            <h5 class="ps-3 pt-2">OT Requests</h5>
+                        </div>
+                        <a href="#" class="nav-link att-review transition-3s text-primary">Review</a>
+                    </div>
+                    <div class="d-flex justify-content-between px-5">
+                        <div>
+                            <p class="fs-4 fw-bold text-center">6</p>
+                            <p>Pending</p>
+                        </div>
+                        <div>
+                            <p class="fs-4 fw-bold text-center">5</p>
+                            <p>Approved</p>
+                        </div>
+                        <div>
+                            <p class="fs-4 fw-bold text-center">5</p>
+                            <p>Assign</p>
+                        </div>
+                        <div>
+                            <p class="fs-4 fw-bold text-center">5</p>
+                            <p>Reject</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card request-leave-card p-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex">
+                            <p class="p-2 bg-accent-100 rounded-3">
+                                <i class="fa-solid fa-calendar-day fs-5 text-warning"></i>
+                                
+                            </p>
+                            <h5 class="ps-3 pt-2">Leave Requests</h5>
+                        </div>
+                        <a href="#" class="nav-link att-review transition-3s text-warning">Review</a>
+                    </div>
+                    <div class="d-flex justify-content-center px-5">
+                        <div>
+                            <p class="fs-4 fw-bold text-center">6</p>
+                            <p>Requests</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="employee-overview pt-5">
+        <h5 class="text-primary pb-3">Employee</h5>
+        <div class="row">
+            <div class="col-6">
+                <div class="card p-4" id="emStatisticCard">
+                    <div class="overview-header d-flex justify-content-between align-items-center px-2">
+                        <p class="fw-bold overview-title">Employees Statistic This Month</p>
+                        <p class="fw-bold overview-title text-primary">100 Employees</p>
+                    </div>
+                    <div class="w-100 d-flex justify-content-center">
+                        <div class="chart-wrapper d-flex justify-content-center py-4">
+                            <canvas id="emChart" class="overview-chart"></canvas>
+        
+                        </div>
+                    </div>
+                    <div class="chart-legend d-flex justify-content-center">
+                        <button type="button" class="bg-primary-hover me-3">Men</button>
+                        <button type="button ms-3">Women</button>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card p-4" id="emLeaveCard">
+                    <div class="overview-header d-flex justify-content-between align-items-center pb-2 px-2">
+                        <p class="fw-bold overview-title">On Leave today</p>
+                        <a href="#" class="nav-link att-review transition-3s text-primary">View All</a>
+                    </div>
+                    <div class="leave-overview px-2">
+                        <div class="leave-info d-flex justify-content-between align-content-center py-3">
+                            <div class="d-flex alig-items-center ">
+                                <img src="upload/MY-IMG.png" class="em-img" alt="Employee profile">
+                                <div class=" ps-4">
+                                    <p class="em-name fw-bold pb-2">Phan Lyhor</p>
+                                    <p class="em-department">Design Department</p>
+                                    <p class="role">UX/UI Designer</p>
+                                </div>
+                            </div>
+
+                            <p class="text-danger fw-bold pb-0">Sick</p>
+                        </div>
+                        <div class="leave-info d-flex justify-content-between align-content-center py-3">
+                            <div class="d-flex alig-items-center ">
+                                <img src="upload/MY-IMG.png" class="em-img" alt="Employee profile">
+                                <div class=" ps-4">
+                                    <p class="em-name fw-bold pb-2">Phan Lyhor</p>
+                                    <p class="em-department">Design Department</p>
+                                    <p class="role">UX/UI Designer</p>
+                                </div>
+                            </div>
+
+                            <p class="text-danger fw-bold pb-0">Sick</p>
+                        </div>
+                        <div class="leave-info d-flex justify-content-between align-content-center py-3">
+                            <div class="d-flex alig-items-center ">
+                                <img src="upload/MY-IMG.png" class="em-img" alt="Employee profile">
+                                <div class=" ps-4">
+                                    <p class="em-name fw-bold pb-2">Phan Lyhor</p>
+                                    <p class="em-department">Design Department</p>
+                                    <p class="role">UX/UI Designer</p>
+                                </div>
+                            </div>
+
+                            <p class="text-danger fw-bold pb-0">Sick</p>
+                        </div>
+                        <div class="leave-info d-flex justify-content-between align-content-center py-3">
+                            <div class="d-flex alig-items-center ">
+                                <img src="upload/MY-IMG.png" class="em-img" alt="Employee profile">
+                                <div class=" ps-4">
+                                    <p class="em-name fw-bold pb-2">Phan Lyhor</p>
+                                    <p class="em-department">Design Department</p>
+                                    <p class="role">UX/UI Designer</p>
+                                </div>
+                            </div>
+
+                            <p class="text-danger fw-bold pb-0">Sick</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>

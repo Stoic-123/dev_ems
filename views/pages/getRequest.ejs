@@ -1,0 +1,671 @@
+    
+    <div class="nav-container my-4">
+      <ul class="nav nav-pills" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="pills-overtime-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-overtime" type="button" role="tab" aria-controls="pills-overtime"
+                  aria-selected="true">Overtime Request</button>
+          </li>
+          <li class="nav-item" role="presentation">
+              <button class="nav-link" id="pills-leave-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-leave" type="button" role="tab" aria-controls="pills-leave"
+                  aria-selected="false">Leave Request</button>
+          </li>
+      </ul>
+  </div>
+  
+  <div class="tab-content" id="pills-tabContent">
+         <!-- =========================================== Request OT tab =============================================================== -->
+      <div class="tab-pane fade show active" id="pills-overtime" role="tabpanel" aria-labelledby="pills-overtime-tab">
+            <section class="mb-4">
+              <div class="bg-white p-4 rounded-8  custome-box-shadow">
+                  <!-- Header Section -->
+                  <div class="d-flex justify-content-between align-items-center mb-4">
+                      <h5 class="card-title fw-bold mb-0">OT Rates</h5>
+                      <div class="d-flex gap-2">
+                          <button class="btn outline-primary d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#editOTrate">
+                              <i class="fa-light fa-pen"></i>
+                              Edit Rates
+                          </button>
+                          <button class="btn bg-primary text-white px-3" data-bs-toggle="modal" data-bs-target="#assignOTModal">
+                              Assign OT
+                          </button>
+                      </div>
+                  </div>
+      
+                  <!-- Rates Section -->
+                  <div class="rates-container">
+                    
+                      <!-- Normal Day Rate -->
+                      <div class="mb-3">
+                              <p class="fs-14 text-gray-500">Normal Day Rate ($/hour)</p>
+                              <p class="fs-18-bold text-gray-600 mt-1">$2.60/hour (X 2)</p>
+                      </div>
+                      <!-- Holiday Rate -->
+                      <div>
+                              <p class="fs-14 text-gray-500">Holiday Rate ($/hour)</p>
+                              <p class="fs-18-bold text-gray-600 mt-1">$3.50/hour (X 3)</p>
+                      </div>
+                  </div>
+              </div>
+          </section>
+          
+          <!-- The Modal -->
+          <div class="modal fade cus-blur-modal" id="editOTrate" tabindex="-1" aria-labelledby="assignOTModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content modal-content-border-0">
+                  <div class="modal-header align-items-start">
+                    <div>
+                      <h5 class="text-gray-600">Edit rates OT</h5>
+                      <p class="text-gray-500">Modify the overtime rates for employees based on their working hours and policies.</p>            
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label class="form-label">Normal Day Rate (X)</label>
+                        <input type="number" id="normalDay" class="form-control" placeholder="$/hour X 2">
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Holiday Rate (X)</label>
+                        <input type="number" id="holiday" class="form-control" placeholder="$/hour X 3">
+                      </div>        
+                      <div class="d-flex gap-2 mt-4 justify-content-end">
+                        <button type="submit" class="btn btn-primary px-4">Submit</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- The Modal -->
+          <div class="modal fade cus-blur-modal" id="assignOTModal" tabindex="-1" aria-labelledby="assignOTModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content modal-content-border-0">
+                  <div class="modal-header align-items-start">
+                    <div>
+                      <h5 class="text-gray-600">Assign OT</h5>
+                      <p class="text-gray-500">You can assign OT to your employee</p>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label class="form-label">Department</label>
+                        <select class="form-select">
+                          <option selected>Web development</option>
+                          <option>Marketing</option>
+                          <option>HR</option>
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Employee</label>
+                        <select class="form-select">
+                          <option selected>Phan Iyhor</option>
+                          <option>John Doe</option>
+                          <option>Jane Smith</option>
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Date</label>
+                        <input type="text" id="date-input" class="form-control" placeholder="Select a date" readonly>
+                      </div>
+                      <div class="d-flex gap-3">
+                        <div class="mb-3">
+                          <label class="form-label">Start time</label>
+                          <input type="text" id="time-input-start" class="form-control" placeholder="Select a time" readonly>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label">End time</label>
+                          <input type="text" id="time-input-end" class="form-control" placeholder="Select a time" readonly>
+                        </div>
+                      </div>          
+                      <div class="mb-3">
+                        <label class="form-label">Reason</label>
+                        <textarea class="form-control" rows="3">System maintenance and deployment</textarea>
+                      </div>
+                      <div class="d-flex gap-2 mt-4 justify-content-end">
+                        <button type="submit" class="btn btn-primary px-4">Submit</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="popup-overlay" id="date-popup">
+              <div class="popup">
+                <h5>Select Date</h5>
+                <div class="picker-section">
+                  <div class="picker-scroll w-50">
+                    <div class="selection-window"></div>
+                    <div class="picker-items" id="day-picker"></div>
+                  </div>
+                  <div class="picker-scroll w-50">
+                    <div class="selection-window"></div>
+                    <div class="picker-items" id="month-picker"></div>
+                  </div>
+                </div>
+                <div class="popup-buttons">
+                  <button class="btn p-0 me-3" id="date-cancel">Cancel</button>
+                  <button class="btn p-0" id="date-set">Set</button>
+                </div>
+              </div>
+            </div>
+      
+            <div class="popup-overlay" id="time-popup">
+              <div class="popup">
+                <h5>Select Time</h5>
+                <div class="picker-section">
+                  <div class="picker-scroll w-100">
+                    <div class="selection-window"></div>
+                    <div class="picker-items" id="hour-picker"></div>
+                  </div>
+                  <div class="picker-scroll w-100">
+                    <div class="selection-window"></div>
+                    <div class="picker-items" id="minute-picker"></div>
+                  </div>
+                  <div class="picker-scroll w-100">
+                    <div class="selection-window"></div>
+                    <div class="picker-items" id="ampm-picker"></div>
+                  </div>           
+                </div>
+                <div class="popup-buttons">
+                  <button class="btn p-0 me-3" id="time-cancel">Cancel</button>
+                  <button class="btn p-0" id="time-set">Set</button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-4">
+              <ul class="nav nav-tabs border-0" id="pills-tab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                      <button class="nav-link active border-0 border-bottom border-3 fw-semibold" 
+                          id="pills-home-tab" data-bs-toggle="pill"
+                          data-bs-target="#pills-pending" type="button" role="tab" 
+                          aria-controls="pills-home" aria-selected="true">
+                          Pending
+                      </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                      <button class="nav-link border-0 border-bottom border-3 fw-semibold" 
+                          id="pills-history-tab" data-bs-toggle="pill"
+                          data-bs-target="#pills-approved" type="button" role="tab" 
+                          aria-controls="pills-history" aria-selected="false">
+                          Approved
+                      </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                      <button class="nav-link border-0 border-bottom border-3 fw-semibold" 
+                          id="pills-reject-tab" data-bs-toggle="pill"
+                          data-bs-target="#pills-reject" type="button" role="tab" 
+                          aria-controls="pills-reject" aria-selected="false">
+                          Reject
+                      </button>
+                  </li>
+              </ul>
+          </div>
+      
+          
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="pills-pending" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+              <div class="d-flex justify-content-between py-3 px-4 bg-white table-container-cus-2 border-bottom">
+                <div class="d-flex align-items-center gap-3">
+                    <p class="text-gray-600 h5 fw-bold">Request OT list</p>
+                    <div class="serach-box-payroll d-flex rounded-8">
+                        <i class="fa-solid fa-magnifying-glass text-gray-600"></i>
+                        <input type="text" class="ms-2 search-box text-gray-500 w-100">
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-4 text-gray-600">
+                    <div class="d-flex gap-2 align-items-center">
+                        <i class="fa-solid fa-filter"></i>
+                        <select id="departmentFilter" class="border-0" style="outline: none;">
+                          <option value="all">All Departments</option>
+                          <option value="front end">Front end</option>
+                          <option value="back end">Back end</option>
+                          <option value="design">Design</option>
+                      </select>
+                    </div>                        
+                    <div class="cursor-pointer d-flex gap-2 align-items-center">
+                        <i class="fa-solid fa-file-export"></i>
+                        <span>Export</span>
+                    </div>
+                </div>
+            </div>
+            <div class="table-container table-container-cus">
+                <table id="" class="display salaryTable">
+                    <thead>
+                        <tr>
+                            <th id="employees-name" style="cursor: pointer;">
+                                <i class="fa-solid fa-sort"></i>
+                                <span>Employee Name</span>
+                            </th>
+                            <th>Date</th>
+                            <th>Start/End</th>
+                            <th>OT type</th>
+                            <th>Overtime pay</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="detail-attendance-em">
+                            <td class="name-department-position">
+                                <div class="profile-em-payroll">
+                                    <img src="upload/default.png" alt="">
+                                </div>
+                                <div>
+                                    <p class="text-gray-600 fs-16">lyhor</p>
+                                    <p class="text-gray-500">Web development/Front end</p>
+                                </div>
+                            </td>
+                            <td>
+                              08-Januray-2025
+                            </td>
+                            <td>                            
+                                <div class="d-flex">
+                                    01:00 PM
+                                <div class="d-flex align-items-center position-relative mx-3"> 
+                                    <div class="dot-con"></div> 
+                                    <div class="line-dot"></div>
+                                    <div class="dot-con-right"></div> 
+                                </div> 
+                                05:00 PM
+                            </div></td>
+                            <td><span class="ps-1 text-warning">Pending</span></td>
+                            <td><span class="text-warning ps-1">Pending</span></td>
+                            <td>
+                              <div class="d-flex align-items-center mt-2">
+                                <i class="fa-duotone fa-solid fa-circle-ellipsis h4 cursor-pointer" data-bs-toggle="modal" data-bs-target="#overtimeModal"></i>
+                            </div>
+                          </td>
+                        </tr>                                                                                            
+                    </tbody>
+                </table>
+            </div>
+            <nav aria-label="Page navigation">
+                <ul id="pagination" class="pagination">
+                </ul>
+            </nav>
+            </div>
+            <div class="tab-pane fade" id="pills-approved" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+              <div class="d-flex justify-content-between py-3 px-4 bg-white table-container-cus-2 border-bottom">
+                <div class="d-flex align-items-center gap-3">
+                    <p class="text-gray-600 h5 fw-bold">Request OT list</p>
+                    <div class="serach-box-payroll d-flex rounded-8">
+                        <i class="fa-solid fa-magnifying-glass text-gray-600"></i>
+                        <input type="text" class="ms-2 search-box text-gray-500 w-100">
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-4 text-gray-600">
+                    <div class="d-flex gap-2 align-items-center">
+                        <i class="fa-solid fa-filter"></i>
+                        <select id="departmentFilter" class="border-0" style="outline: none;">
+                          <option value="all">All Departments</option>
+                          <option value="front end">Front end</option>
+                          <option value="back end">Back end</option>
+                          <option value="design">Design</option>
+                      </select>
+                    </div>                        
+                    <div class="cursor-pointer d-flex gap-2 align-items-center">
+                        <i class="fa-solid fa-file-export"></i>
+                        <span>Export</span>
+                    </div>
+                </div>
+            </div>
+            <div class="table-container table-container-cus">
+                <table id="" class="display salaryTable">
+                    <thead>
+                        <tr>
+                            <th id="employees-name" style="cursor: pointer;">
+                                <i class="fa-solid fa-sort"></i>
+                                <span>Employee Name</span>
+                            </th>
+                            <th>Date</th>
+                            <th>Start/End</th>
+                            <th>Status</th>
+                            <th>Overtime pay</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="detail-attendance-em">
+                            <td class="name-department-position">
+                                <div class="profile-em-payroll">
+                                    <img src="upload/default.png" alt="">
+                                </div>
+                                <div>
+                                    <p class="text-gray-600 fs-16">lyhor</p>
+                                    <p class="text-gray-500">Web development/Front end</p>
+                                </div>
+                            </td>
+                            <td>
+                             <p class="px-2">08-Januray-2025</p>
+                            </td>
+                            <td>                            
+                                <div class="d-flex">
+                                    01:00 PM
+                                <div class="d-flex align-items-center position-relative mx-3"> 
+                                    <div class="dot-con"></div> 
+                                    <div class="line-dot"></div>
+                                    <div class="dot-con-right"></div> 
+                                </div> 
+                                05:00 PM
+                            </div></td>
+                            <td><span class="ps-1 text-success">Approved</span></td>
+                            <td><span class="ps-1 text-success">$13.00</span></td>
+                            <td>
+                             <p>System....</p>
+                          </td>
+                        </tr>                                                                                            
+                    </tbody>
+                </table>
+            </div>
+            <nav aria-label="Page navigation">
+                <ul id="pagination" class="pagination">
+                </ul>
+            </nav>
+            </div>
+            <div class="tab-pane fade" id="pills-reject" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+              <div class="d-flex justify-content-between py-3 px-4 bg-white table-container-cus-2 border-bottom">
+                <div class="d-flex align-items-center gap-3">
+                    <p class="text-gray-600 h5 fw-bold">Request OT list</p>
+                    <div class="serach-box-payroll d-flex rounded-8">
+                        <i class="fa-solid fa-magnifying-glass text-gray-600"></i>
+                        <input type="text" class="ms-2 search-box text-gray-500 w-100">
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-4 text-gray-600">
+                    <div class="d-flex gap-2 align-items-center">
+                        <i class="fa-solid fa-filter"></i>
+                        <select id="departmentFilter" class="border-0" style="outline: none;">
+                          <option value="all">All Departments</option>
+                          <option value="front end">Front end</option>
+                          <option value="back end">Back end</option>
+                          <option value="design">Design</option>
+                      </select>
+                    </div>                        
+                    <div class="cursor-pointer d-flex gap-2 align-items-center">
+                        <i class="fa-solid fa-file-export"></i>
+                        <span>Export</span>
+                    </div>
+                </div>
+            </div>
+            <div class="table-container table-container-cus">
+                <table id="" class="display salaryTable">
+                    <thead>
+                        <tr>
+                            <th id="employees-name" style="cursor: pointer;">
+                                <i class="fa-solid fa-sort"></i>
+                                <span>Employee Name</span>
+                            </th>
+                            <th>Date</th>
+                            <th>Start/End</th>
+                            <th>Status</th>
+                            <th>Overtime pay</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="detail-attendance-em">
+                            <td class="name-department-position">
+                                <div class="profile-em-payroll">
+                                    <img src="upload/default.png" alt="">
+                                </div>
+                                <div>
+                                    <p class="text-gray-600 fs-16">lyhor</p>
+                                    <p class="text-gray-500">Web development/Front end</p>
+                                </div>
+                            </td>
+                            <td>
+                             <p class="px-2">08-Januray-2025</p>
+                            </td>
+                            <td>                            
+                                <div class="d-flex">
+                                    01:00 PM
+                                <div class="d-flex align-items-center position-relative mx-3"> 
+                                    <div class="dot-con"></div> 
+                                    <div class="line-dot"></div>
+                                    <div class="dot-con-right"></div> 
+                                </div> 
+                                05:00 PM
+                            </div></td>
+                            <td><span class="ps-1 text-danger">Reject</span></td>
+                            <td><span class="ps-1 text-danger">$00.00</span></td>
+                            <td>
+                             <p>System....</p>
+                          </td>
+                        </tr>                                                                                            
+                    </tbody>
+                </table>
+            </div>
+            <nav aria-label="Page navigation">
+                <ul id="pagination" class="pagination">
+                </ul>
+            </nav>
+            </div>
+          </div>
+      
+          <!-- Modal to approved OT -->
+        <div class="modal fade cus-blur-modal" id="overtimeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-content-border-0 bg-color">
+              <div class="modal-header align-items-start pb-0">
+                <div class="d-flex align-items-center gap-3">
+                  <img src="upload/default.png" style="width: 55px; height: 55px;" class="rounded-circle" alt="">
+                  <div>
+                    <h5 class="text-gray-600 mb-0 pb-0">Phan lyhor</h5>
+                    <p class="text-gray-500">Web development / front end</p>
+                  </div>
+                </div>
+                <button type="button" class="btn-close fs-6" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body pt-0">
+                <hr>
+                <div class="row gy-3">
+                  <div class="col-6 px-2  ">
+                    <div class="card p-3">
+                      <p class="text-gray-500">Date</p>
+                      <p class="text-gray-600 fs-16">08-December-2025</p>
+                    </div>
+                  </div>
+                  <div class="col-6 px-2">
+                    <div class="card p-3">
+                      <p class="text-gray-500">Hours</p>
+                      <p class="text-gray-600 fs-16">5</p>
+                    </div>
+                  </div>
+                  <div class="col-6 px-2">
+                    <div class="card p-3">
+                      <p class="text-gray-500">Start/End</p>
+                      <p class="text-gray-600 fs-16">08:30 AM - 04:30 PM</p>
+                    </div>
+                  </div>
+                  <div class="col-6 px-2">
+                    <div class="card p-3">
+                      <p class="text-gray-500">Overtime Pay</p>
+                      <p class="text-gray-600 fs-16">$00.00</p>
+                    </div>
+                  </div>
+                  <div class="col-12 px-2">
+                    <div class="card p-3">
+                      <p class="text-gray-500">Reason</p>
+                      <p class="text-gray-600 fs-16">System maintenance and deployment</p>
+                    </div>
+                  </div>
+                  <div class="col-6 px-2">
+                    <div class="p-3 card">
+                      <p class="text-gray-500">OT type</p>
+                      <div class="d-flex gap-3 mt-2">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="action" id="normalDay" value="normalDay">
+                          <label class="form-check-label" for="normalDay">Normal</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="action" id="holiday" value="holiday">
+                          <label class="form-check-label" for="holiday">Holiday</label>
+                        </div>               
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-6 px-2">
+                    <div class="p-3 card">
+                      <p class="text-gray-500">Action</p>
+                      <div class="d-flex gap-3 mt-2">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="action" id="reject" value="reject">
+                          <label class="form-check-label" for="reject">Reject</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="action" id="approved" value="approved">
+                          <label class="form-check-label" for="approved">Approved</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary mt-3" id="saveButton">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Toast Container -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+          <!-- Reject Toast -->
+          <div id="rejectToast" class="toast my-0" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                  <strong class="me-auto">Notification</strong>
+                  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+              <div class="toast-body">
+                  Request rejected successfully!
+              </div>
+          </div>
+      
+          <!-- Approve Toast -->
+          <div id="approveToast" class="toast my-0" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                  <strong class="me-auto">Notification</strong>
+                  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+              <div class="toast-body">
+                  Request approved successfully!
+              </div>
+          </div>
+      </div>
+      </div>
+  
+          <!-- ======================================= Leave Request ===================================================== -->
+      <div class="tab-pane fade" id="pills-leave" role="tabpanel" aria-labelledby="pills-leave-tab">
+        <div class="d-flex justify-content-between py-3 px-4 bg-white table-container-cus-2 border-bottom">
+          <div class="d-flex align-items-center gap-3">
+              <p class="text-gray-600 h5 fw-bold">Leave Request list</p>
+              <div class="serach-box-payroll d-flex rounded-8">
+                  <i class="fa-solid fa-magnifying-glass text-gray-600"></i>
+                  <input type="text" class="ms-2 search-box text-gray-500 w-100">
+              </div>
+          </div>
+          <div class="d-flex align-items-center gap-4 text-gray-600">
+              <div class="d-flex gap-2 align-items-center">
+                  <i class="fa-solid fa-filter"></i>
+                  <select id="departmentFilter" class="border-0" style="outline: none;">
+                    <option value="all">All Departments</option>
+                    <option value="front end">Front end</option>
+                    <option value="back end">Back end</option>
+                    <option value="design">Design</option>
+                </select>
+              </div>                        
+              <div class="cursor-pointer d-flex gap-2 align-items-center">
+                  <i class="fa-solid fa-file-export"></i>
+                  <span>Export</span>
+              </div>
+          </div>
+      </div>
+      <div class="table-container table-container-cus">
+          <table id="" class="display salaryTable">
+              <thead>
+                  <tr>
+                      <th id="employees-name" style="cursor: pointer;">
+                          <i class="fa-solid fa-sort"></i>
+                          <span>Employee Name</span>
+                      </th>
+                      <th>Date</th>
+                      <th>Leave type</th>
+                      <th>Duration</th>
+                      <th>Deduction</th>
+                      <th>Reason</th>
+                  </tr>
+              </thead>
+              <tbody>                                                                                        
+                  <tr class="detail-attendance-em">
+                      <td class="name-department-position">
+                          <div class="profile-em-payroll">
+                              <img src="upload/default.png" alt="">
+                          </div>
+                          <div>
+                              <p class="text-gray-600 fs-16">lyhor</p>
+                              <p class="text-gray-500">Web development/Front end</p>
+                          </div>
+                      </td>
+                      <td>
+                        08-Januray-2025
+                      </td>
+                      <td>
+                        <span class="text-warning">Annual Leave</span>
+                      </td>
+                      <td>
+                        2 Days
+                      </td>
+                      <td>
+                        <span>$00.00</span>
+                      </td>
+                      <td>
+                        I am sick....
+                      </td>
+                  </tr>                                                                                            
+                  <tr class="detail-attendance-em">
+                      <td class="name-department-position">
+                          <div class="profile-em-payroll">
+                              <img src="upload/default.png" alt="">
+                          </div>
+                          <div>
+                              <p class="text-gray-600 fs-16">lyhor</p>
+                              <p class="text-gray-500">Web development/Front end</p>
+                          </div>
+                      </td>
+                      <td>
+                        08-Januray-2025
+                      </td>
+                      <td>
+                        <span class="text-warning">Annual Leave</span>
+                      </td>
+                      <td>
+                        2 Days
+                      </td>
+                      <td>
+                        <span class="text-danger">-$3.00</span>
+                      </td>
+                      <td>
+                        I am sick....
+                      </td>
+                  </tr>                                                                                            
+              </tbody>
+          </table>
+      </div>
+      <nav aria-label="Page navigation">
+          <ul id="pagination" class="pagination">
+          </ul>
+      </nav>
+      </div>
+  </div>
+  
+    
+
+
+

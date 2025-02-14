@@ -1,0 +1,1754 @@
+
+    <!-- Header Section -->
+    <section class="staff-header my-4 row align-items-center ">
+        <div class="col-md-8 d-flex align-items-center">
+            <img src="upload/MY-IMG.png" alt="Employee photo" class="profile-image rounded-2 me-3">
+            <div>
+                <p class="h4 fw-bold mb-0 text-gray-600">Phan Lyhor</p>
+                <div class="text-muted small mt-2">
+                    <p class="me-3 text-gray-500">ID: #2024-0001</p>
+                </div>
+            </div>
+            <div class="ms-5">
+                <p class="pb-0 mb-0 text-center fw-bold text-gray-600">Status</p>
+                <div class="line-custom"></div>
+                <div class="d-flex">
+                    <div class="text-success active-status">Active</div>
+                    <div class="status"><div class="dot"></div>Check in</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 text-md-end mt-3 mt-md-0 d-flex justify-content-end">
+            <button type="button" class="btn add-att-btn btn-primary me-3"  data-bs-toggle="modal" data-bs-target="#addAttModal">
+                <span class="pe-2"><i class="fa-duotone fa-regular fa-rectangle-history-circle-plus"></i></span>
+                Add Attendance
+            </button>
+            <button class="btn btn-primary d-flex align-content-center py-2 px-3"><i class="fa-duotone fa-light fa-id-card-clip me-2 fs-5"></i> Card ID</button>
+            
+            <!-- Add Att Modal -->
+            <div class="modal fade" id="addAttModal" tabindex="-1" aria-labelledby="addAttModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="addAttModalLabel">Add Attendance</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="#" method="post">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="department" class="form-label d-flex justify-content-start">Department</label>
+                                        <select class="form-select" id="department" name="department" aria-label="Department Select">
+                                            <option selected value="IT">IT</option>
+                                            <option value="Fin">Finance</option>
+                                            <option value="HR">HR</option>
+                                            
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="emName" class="form-label d-flex justify-content-start">Employee Name</label>
+                                        <select class="form-select" id="emName" name="emName" aria-label="Employee Name Select">
+                                            <option selected value="Phan Lyhor">Phan Lyhor</option>
+                                            <option value="Fin">Finance</option>
+                                            <option value="HR">HR</option>
+                                            
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3 position-relative">
+                                        <label for="leaveDate" class="form-label  d-flex justify-content-start">Date</label>
+    
+                                        <input type="text" class="form-control" id="leaveDate" value="11-Jan-1999" data-input>
+                                        <label for="leaveDate" class="position-absolute att-date-icon">
+                                            <i class="fa-duotone fa-light fa-calendar-days fs-5"></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="attType" class="form-label d-flex justify-content-start">Attendance Type</label>
+                                        <select class="form-select" id="attType" name="attType" aria-label="Att Type Select">
+                                            <option selected value="Absent">Absent</option>
+                                            <option value="Present">Present</option>
+                                            
+                                            
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="shift" class="form-label d-flex justify-content-start">Shift</label>
+                                        <select class="form-select" id="shift" name="shift" aria-label="shift Select">
+                                            <option selected value="Morning">Morning</option>
+                                            <option value="Evening">Evening</option>
+                                            <option value="Night">Night</option>
+                                            
+                                            
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <label for="clockIn" class="form-label d-flex justify-content-start">Department</label>
+                                    <select class="form-select" id="clockIn" name="clockIn" aria-label="Clock In Select">
+                                        <option selected disabled>ClockIn Hour</option>
+                                        <option value="1">6:00 PM</option>
+                                        <option value="2">6:30 PM</option>
+                                        <option value="3">7:00 PM</option>
+                                        <option value="4">7:30 PM</option>
+                                        <option value="5">8:00 PM</option>
+                                        
+                                    </select>
+                                </div>
+                                <div class="col-6">
+                                    <label for="clockOut" class="form-label d-flex justify-content-start">Department</label>
+                                    <select class="form-select" id="clockOut" name="clockOut" aria-label="Clock Out Select">
+                                        <option selected disabled>ClockOut Hour</option>
+                                        <option value="1">6:00 PM</option>
+                                        <option value="2">6:30 PM</option>
+                                        <option value="3">7:00 PM</option>
+                                        <option value="4">7:30 PM</option>
+                                        <option value="5">8:00 PM</option>
+                                        
+                                    </select>
+                                </div>
+                            </div>
+                            
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Add</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="employee-info-detail row">
+        
+        <div class="col-8">
+            <div class="nav-pill-wrapper border-0 box-shadow-2 border-radius-8 px-3 py-2 mt-5 mb-3">
+                <ul class="nav nav-pills justify-content-between" id="pills-tab" role="tablist">
+                    <li class="nav-item pe-2" role="presentation">
+                        <button class="nav-link active" id="pills-info-tab" data-bs-toggle="pill" data-bs-target="#pills-info"
+                        type="button" role="tab" aria-controls="pills-info" aria-selected="true">Personal Information</button>
+                    </li>
+                    <li class="nav-item pe-2" role="presentation">
+                        <button class="nav-link " id="pills-time-tab" data-bs-toggle="pill" data-bs-target="#pills-time"
+                        type="button" role="tab" aria-controls="pills-time" aria-selected="false">Time Management</button>
+                    </li>
+                    <li class="nav-item pe-2" role="presentation">
+                        <button class="nav-link " id="pills-payroll-tab" data-bs-toggle="pill" data-bs-target="#pills-payroll"
+                        type="button" role="tab" aria-controls="pills-payroll" aria-selected="false">Payroll</button>
+                    </li>
+                    <li class="nav-item pe-2" role="presentation">
+                        <button class="nav-link " id="pills-document-tab" data-bs-toggle="pill" data-bs-target="#pills-document"
+                        type="button" role="tab" aria-controls="pills-document" aria-selected="false">Document</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+
+        <!-- Tab panes -->
+        <div class="col-12 tab-content pb-5" id="pills-tabContent">
+            <!-- Personal Info Tabpan -->
+            <div class="tab-pane active pt-3" id="pills-info" role="tabpanel" aria-labelledby="info-tab" tabindex="0">
+                <div class="em-basic-info">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="contact-info custome-box-shadow p-3 h-100">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="h5 fw-bold mb-0">Personal Information</p>
+
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn text-primary p-0" data-bs-toggle="modal" data-bs-target="#basicInfo">
+                                        <i class="fa-duotone fa-light fa-pen-to-square fs-5"></i>
+
+                                    </button>
+                                </div>
+                                <hr>
+                                <div class="row info-row gy-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="info-label">First Name</div>
+                                        <div class="info-value">Samsong</div>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="info-label">Last Name</div>
+                                        <div class="info-value">Han</div>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="info-label">Gender</div>
+                                        <div class="info-value">Male</div>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="info-label">Date Of Birth</div>
+                                        <div class="info-value">11-Jan-1999</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="contact-info custome-box-shadow p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="h5 fw-bold mb-0">Employment Information</p>
+
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn text-primary p-0" data-bs-toggle="modal" data-bs-target="#employmentInfo">
+                                        <i class="fa-duotone fa-light fa-pen-to-square fs-5"></i>
+                                    </button>
+                                </div>
+                                <hr>
+                                <div class="row info-row gy-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="info-label">Basic Salary</div>
+                                        <div class="info-value">$599.00</div>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="info-label">Position</div>
+                                        <div class="info-value">Front-End Developer</div>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="info-label">Department</div>
+                                        <div class="info-value">Web Development</div>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="info-label">Employment Type</div>
+                                        <div class="info-value">Full-time</div>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="info-label">Status</div>
+                                        <div class="info-value">Active</div>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="info-label">Joining Date</div>
+                                        <div class="info-value">01/01/2022</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="col-4">
+                            <div class="contact-info custome-box-shadow p-3 h-100">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="h5 fw-bold mb-0">Contact Information</p>
+
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn text-primary p-0" data-bs-toggle="modal" data-bs-target="#contactInfo">
+                                        <i class="fa-duotone fa-light fa-pen-to-square fs-5"></i>
+
+                                    </button>
+                                </div>
+                                <hr>
+                                <div class="row info-row gy-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="info-label">Phone Number</div>
+                                        <div class="info-value">0123456789</div>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="info-label">Email</div>
+                                        <div class="info-value">123@gmail.com</div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="info-label">Address</div>
+                                        <div class="info-value">st 123, 456, ToulKork, Phnom Penh</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- ==================================================== -->
+                <!-- basic Modal -->
+                <div class="modal fade" id="basicInfo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="basicInfo" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-md-down">
+                        <div class="modal-content p-3">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5 text-primary" id="basicInfoLabel">Edit Basic Information</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body row">
+                                <div class="col-12 d-flex justify-content-center">
+                                    <img src="/upload/MY-IMG.png" class="img-edit" alt="Employee Image">
+
+                                </div>
+                                <div class="col-12">
+                                    <div class="m-3 d-flex justify-content-center">
+                                        <label for="emEditImg" class="form-label upload-img cursor-pointer">Upload Image 
+                                            <span class="ps-2"><i class="fa-solid fa-cloud-arrow-up"></i></span>
+                                        </label>
+                                        
+                                        <input class="form-control d-hide" name="emEditImg" id="emEditImg" type="file" placeholder="" aria-label="">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <form action="#" method="PUT" class="row">
+                                        <div class="col-6">
+                                            <div class="mb-3">
+                                                <label for="editfName" class="form-label">First Name</label>
+                                                <input class="form-control" id="editfName" type="text" value="Phan" aria-label="">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-6">
+                                            <div class="mb-3">
+                                                <label for="editlName" class="form-label">Last Name</label>
+                                                <input class="form-control" id="editlName" type="text" value="Lyhor" aria-label="">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="mb-3 select">
+                                                <label for="editGender" class="form-label">Gender</label>
+                                                <select class="form-select select-gender" id="editGender" name="editGender" aria-label="Gender Select">
+                                                    <option selected value="Male">Male</option>
+                                                    <option value="1">Female</option>
+                                                    
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="mb-3 edit-date position-relative">
+                                                <label for="editDOB" class="form-label">Date of birth</label>
+
+                                                <input type="text" class="form-control dob-input" id="editDOB" value="11-Jan-1999" data-input>
+                                                <label for="editDOB" class="position-absolute date-icon">
+                                                    <i class="fa-duotone fa-light fa-calendar-days fs-5"></i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        
+
+                                    </form>
+                                </div>
+                                
+                                
+                                
+                                
+                                
+                                
+                            </div>
+                            <div class="modal-footer d-flex justify-content-center">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary">Update</button>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+
+                <!-- Employment Modal -->
+                <div class="modal fade" id="employmentInfo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="employmentInfo" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-md-down">
+                        <div class="modal-content p-3">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5 text-primary" id="employmentInfoLabel">Edit Employment Information</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body row">
+                                <div class="col-12">
+                                    <form action="#" method="PUT" class="row">
+                                        <div class="col-6">
+                                            <div class="mb-3">
+                                                <label for="editBasicSalary" class="form-label">First Name</label>
+                                                <input class="form-control" id="editBasicSalary" type="text" value="$599.00" aria-label="">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-6">
+                                            <div class="mb-3">
+                                                <label for="editPosition" class="form-label">Position</label>
+                                                <input class="form-control" id="editPosition" type="text" value="Front-End Developer" aria-label="">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="mb-3">
+                                                <label for="editDepartment" class="form-label">Department</label>
+                                                <select class="form-select select-department" id="editDepartment" name="editDepartment" aria-label="Department Select">
+                                                    <option selected value="IT">IT</option>
+                                                    <option value="Fin">Finance</option>
+                                                    <option value="HR">HR</option>
+                                                    
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="mb-3">
+                                                <label for="editEmType" class="form-label">Employment Type</label>
+                                                <select class="form-select" id="editEmType" name="editEmType" aria-label="Employment Type Select">
+                                                    <option selected value="fullTime">Full-Time</option>
+                                                    <option value="partTime">Part-Time</option>
+                                                    
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+
+                                    </form>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer d-flex justify-content-center">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary">Update</button>
+                            </div>
+                        </div>  
+                    </div>
+                
+                </div>
+
+                <!-- Contact Modal -->
+                <div class="modal fade" id="contactInfo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="contactInfo" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-md-down">
+                        <div class="modal-content p-3">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5 text-primary" id="contactInfoLabel">Edit Contact Information</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body row">
+                                <div class="col-12">
+                                    <form action="#" method="PUT" class="row">
+                                        <div class="col-6">
+                                            <div class="mb-3">
+                                                <label for="editPhoneNumber" class="form-label">Phone Number</label>
+                                                <input class="form-control" name="editPhoneNumberr" id="editPhoneNumber" type="text" value="0123456789" aria-label="">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-6">
+                                            <div class="mb-3">
+                                                <label for="editEmail" class="form-label">Email</label>
+                                                <input class="form-control" id="editEmail" type="email" value="123@gmail.com" aria-label="">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="mb-3">
+                                                <label for="editAddress" class="form-label">Address</label>
+                                                <input class="form-control" id="editAddress" type="text" value="st 123, 456, ToulKork, Phnom Penh" aria-label="">
+                                            </div>
+                                        </div>
+                                        
+
+                                    </form>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer d-flex justify-content-center">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary">Update</button>
+                            </div>
+                        </div>  
+                    </div>
+                
+                </div>
+                <!-- ==================================================== -->
+
+            </div>
+
+            <!-- Time Management Tabpane -->
+            
+            <div class="tab-pane" id="pills-time" role="tabpanel" aria-labelledby="time-tab" tabindex="0">
+                <ul class="nav nav-underline pt-3" id="timeTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="att-tab" data-bs-toggle="tab" data-bs-target="#att-tab-pane" type="button" role="tab" aria-controls="att" aria-selected="true">Attendance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="leave-tab" data-bs-toggle="tab" data-bs-target="#leave-tab-pane" type="button" role="tab" aria-controls="leave" aria-selected="false">Leave</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="overtime-tab" data-bs-toggle="tab" data-bs-target="#ot-tab-pane" type="button" role="tab" aria-controls="ot" aria-selected="false">Overtime</a>
+                    </li>
+                    
+                </ul>
+
+                <div class="tab-content" id="timeManagementContent">
+                    <div class="tab-pane fade show active" id="att-tab-pane" role="tabpanel" aria-labelledby="att-tab" tabindex="0">
+                        <div class="row my-4">
+                            <div class="col-12 d-flex justify-content-end mb-4">
+                                <div class="w-100 d-flex justify-content-between align-items-end">
+                                    <p class="fs-5 fw-bold mb-0 text-gray-600">Attendance Record</p>
+                                    <div class="position-relative text-end ms-3">
+                                        <input class="select-date" type="text" id="flatpickr" placeholder="Select Date">
+                                        <span class="arrow-down"><i class="fa-solid fa-chevron-down"></i></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-4">
+                                <div class="card h-100 custome-box-shadow border-0">
+                                    <div class="card-body">
+                                        <h5 class="text-capitalize mb-4">
+                                            <span><i class="fa-duotone fa-light fa-timer me-2 text-success"></i></span>
+                                            <span>Can day off</span>
+                                        </h5>
+                                        <h3>
+                                            <span class="fw-bold">05</span>/18 days
+                                        </h3>
+                                        <p>Can day off 
+                                            <span>10</span>
+                                            days more
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                                
+                            <div class="col-8">
+                                <div class="card h-100 custome-box-shadow activity-sum-card border-0">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between position-relative">
+                                            <h5 class="text-capitalize mb-4 ">
+                                                <span><i class="fa-duotone fa-light fa-clipboard-list-check me-2 text-success"></i>
+                                                </span>Summary your activity
+                                            </h5>
+                                            
+                                        </div>
+                                        <ul class="activity-summary d-flex list-unstyled justify-content-between">
+                                            <li class="ontime">
+                                                <h3 class="fw-bold text-center">25</h3>
+                                                <p>late</p>
+                                            </li>
+                                            <li class="checkin">
+                                                <h3 h3 class="fw-bold text-center">1</h3>
+                                                <p>late check in</p>
+                                            </li>
+                                            <li class="checkout">
+                                                <h3 h3 class="fw-bold text-center">1</h3>
+                                                <p>early check out</p>
+                                            </li>
+                                            <li class="absent">
+                                                <h3 h3 class="fw-bold text-center">1</h3>
+                                                <p>absent</p>
+                                            </li>
+                                            <li class="permission">
+                                                <h3 h3 class="fw-bold text-center">1</h3>
+                                                <p>permission</p>
+                                            </li>
+                                            <li class="overtime">
+                                                <h3 h3 class="fw-bold text-center">1</h3>
+                                                <p>overtime</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="card border-0 custome-box-shadow mt-5 mb-4">
+                                    <div class="card-body">
+                                        <p class="fs-5 text-primary mb-4">Today</p>
+                                        <div class="d-flex justify-content-between align-items-end">
+                                            <div class="clock-in">
+                                                <h6 class="fw-bold mb-3">Clock In</h6>
+                                                <p class="time text-gray-500">8:00 AM</p>
+                                            </div>
+                                            <div class="timer">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="morning-clock-in">
+                                                        <p class="text-gray-500">08:00</p>
+                                                    </div>
+                                                    <div class="morning-clock-out">
+                                                        <p class="text-gray-500">12:00</p>
+                                                    </div>
+                                                </div>
+                                                <div class="progress" role="progressbar" aria-label="Basic example"
+                                                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                    <div class="progress-bar w-100 bg-success text-white">Working Time</div>
+                                                </div>
+                                            </div>
+                                            <div class="break-time d-flex">
+                                                <div class="progress" role="progressbar" aria-label="Basic example"
+                                                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                    <div class="progress-bar w-100 bg-warning text-white px-4">Break</div>
+                                                </div>
+                                            </div>
+                                            <div class="timer">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="afternoon-clock-in">
+                                                        <p class="text-gray-500">01:00</p>
+                                                    </div>
+                                                    <div class="afternoon-clock-out">
+                                                        <p class="text-gray-500">05:00</p>
+                                                    </div>
+                                                </div>
+                                                <div class="progress" role="progressbar" aria-label="Basic example"
+                                                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                    <div class="progress-bar w-100 bg-success text-white">Working Time</div>
+                                                </div>
+                                            </div>
+                                            <div class="clock-out text-center">
+                                                <h6 class="fw-bold mb-3">Clock Out</h6>
+                                                <p class="time text-center text-gray-500">5:00 PM</p>
+                                            </div>
+                                            <div class="total-work">
+                                                <h6 class="fw-bold mb-3">Total Worked</h6>
+                                                <p class="time text-center text-gray-500">8h</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="card border-0 custome-box-shadow mb-4">
+                                    <div class="card-body">
+                                        <p class="date fs-5 text-primary mb-4">Thursday, 18</p>
+                                        <div class="d-flex justify-content-between align-items-end">
+                                            <div class="clock-in">
+                                                <h6 class="fw-bold mb-3">Clock In</h6>
+                                                <p class="time text-gray-500">8:00 AM</p>
+                                            </div>
+                                            <div class="timer">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="morning-clock-in">
+                                                        <p class="text-gray-500">08:00</p>
+                                                    </div>
+                                                    <div class="morning-clock-out">
+                                                        <p class="text-gray-500">12:00</p>
+                                                    </div>
+                                                </div>
+                                                    <div class="progress" role="progressbar" aria-label="Basic example"
+                                                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                    <div class="progress-bar w-100 bg-danger text-white">Absent</div>
+                                                </div>
+                                            </div>
+                                            <div class="break-time d-flex">
+                                                <div class="progress" role="progressbar" aria-label="Basic example"
+                                                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                    <div class="progress-bar w-100 bg-warning text-white px-4">Break</div>
+                                                </div>
+                                            </div>
+                                            <div class="timer">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="afternoon-clock-in">
+                                                        <p class="text-gray-500">01:00</p>
+                                                    </div>
+                                                    <div class="afternoon-clock-out">
+                                                        <p class="text-gray-500">05:00</p>
+                                                    </div>
+                                                </div>
+                                                <div class="progress" role="progressbar" aria-label="Basic example"
+                                                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                    <div class="progress-bar w-100 bg-danger text-white">Absent</div>
+                                                </div>
+                                            </div>
+                                            <div class="clock-out text-center">
+                                                <h6 class="fw-bold mb-3">Clock Out</h6>
+                                                <p class="time text-center text-gray-500">5:00 PM</p>
+                                            </div>
+                                            <div class="total-work">
+                                                <h6 class="fw-bold mb-3">Total Worked</h6>
+                                                <p class="time text-center text-gray-500">8h</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="card border-0 custome-box-shadow mb-4">
+                                    <div class="card-body">
+                                        <p class="date fs-5 text-primary mb-4">Thursday, 18</p>
+                                        <div class="d-flex justify-content-between align-items-end">
+                                            <div class="clock-in">
+                                                <h6 class="fw-bold mb-3">Clock In</h6>
+                                                <p class="time text-gray-500">8:00 AM</p>
+                                            </div>
+                                            <div class="timer d-flex justify-content-start">
+                                                <div class="col-2 pe-1">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="morning-clock-in">
+                                                            <p class="text-gray-500">08:00</p>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="progress" role="progressbar" aria-label="Basic example"
+                                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-bar w-100 bg-danger text-white">Absent</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-10 px-0">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class= "morning-clock-in">
+                                                            <p class="text-gray-500">09:00</p>
+                                                        </div>
+                                                        <div class="morning-clock-out">
+                                                            <p class="text-gray-500">12:00</p>
+                                                        </div>
+                                                    </div>
+                                                        <div class="progress" role="progressbar" aria-label="Basic example"
+                                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-bar w-100 bg-danger text-white">Absent</div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="break-time d-flex">
+                                                <div class="progress" role="progressbar" aria-label="Basic example"
+                                                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                    <div class="progress-bar w-100 bg-warning text-white px-4">Break</div>
+                                                </div>
+                                            </div>
+                                            <div class="timer">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="afternoon-clock-in">
+                                                        <p class="text-gray-500">01:00</p>
+                                                    </div>
+                                                    <div class="afternoon-clock-out">
+                                                        <p class="text-gray-500">05:00</p>
+                                                    </div>
+                                                </div>
+                                                <div class="progress" role="progressbar" aria-label="Basic example"
+                                                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                    <div class="progress-bar w-100 bg-danger text-white">Absent</div>
+                                                </div>
+                                            </div>
+                                            <div class="clock-out text-center">
+                                                <h6 class="fw-bold mb-3">Clock Out</h6>
+                                                <p class="time text-center text-gray-500">5:00 PM</p>
+                                            </div>
+                                            <div class="total-work">
+                                                <h6 class="fw-bold mb-3">Total Worked</h6>
+                                                <p class="time text-center text-gray-500">8h</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="leave-tab-pane" role="tabpanel" aria-labelledby="leave-tab" tabindex="0">
+                        <div class="row">
+                            <div class="col-12 py-3">
+                                <div class="d-flex justify-content-between align-items-end">
+                                    <p class="fs-5 fw-bold mb-0 text-gray-600">Leave History</p>
+                                    <div class="filter-leave d-flex">
+                                        
+                                        <div class="position-relative">
+                                        <input class="select-date" type="text" id="flatpickr" placeholder="Filter by date">
+                                        <span class="arrow-down"><i class="fa-solid fa-chevron-down"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="table-container my-3">
+                                    <table id="leaveTable" class="display mb-4" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                        <th>Date</th>
+                                        <th>Leave Type</th>
+                                        <th>Duration</th>
+                                        <th>Deduction</th>
+                                        <th>Reason</th>
+                                        <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                        <td>1111</td>
+                                        <td>Annual</td>
+                                        <td>2 days</td>
+                                        <td>0.00$</td>
+                                        <td>aaaaaaaaaaaaaaa</td>
+                                        <td class="submit-status">Submitted</td>
+                                        </tr>
+                                        <tr>
+                                        <td>1111</td>
+                                        <td>Annual</td>
+                                        <td>2 days</td>
+                                        <td>0.00$</td>
+                                        <td>aaaaaaaaaaaaaaa</td>
+                                        <td class="submit-status">Submitted</td>
+                                        </tr>
+                                        <tr>
+                                        <td>1111</td>
+                                        <td>Annual</td>
+                                        <td>2 days</td>
+                                        <td>0.00$</td>
+                                        <td>aaaaaaaaaaaaaaa</td>
+                                        <td class="submit-status">Submitted</td>
+                                        </tr>
+                                        <tr>
+                                        <td>1111</td>
+                                        <td>Annual</td>
+                                        <td>2 days</td>
+                                        <td>0.00$</td>
+                                        <td>aaaaaaaaaaaaaaa</td>
+                                        <td class="submit-status">Submitted</td>
+                                        </tr>
+                                        <tr>
+                                        <td>1111</td>
+                                        <td>Annual</td>
+                                        <td>2 days</td>
+                                        <td>0.00$</td>
+                                        <td>aaaaaaaaaaaaaaa</td>
+                                        <td class="submit-status">Submitted</td>
+                                        </tr>
+                                        <tr>
+                                        <td>1111</td>
+                                        <td>Annual</td>
+                                        <td>2 days</td>
+                                        <td>0.00$</td>
+                                        <td>aaaaaaaaaaaaaaa</td>
+                                        <td class="submit-status">Submitted</td>
+                                        </tr>
+                                        <tr>
+                                        <td>1111</td>
+                                        <td>Annual</td>
+                                        <td>2 days</td>
+                                        <td>0.00$</td>
+                                        <td>aaaaaaaaaaaaaaa</td>
+                                        <td class="submit-status">Submitted</td>
+                                        </tr>
+                                        <tr>
+                                        <td>1111</td>
+                                        <td>Annual</td>
+                                        <td>2 days</td>
+                                        <td>0.00$</td>
+                                        <td>aaaaaaaaaaaaaaa</td>
+                                        <td class="submit-status">Submitted</td>
+                                        </tr>
+                                        <tr>
+                                        <td>1111</td>
+                                        <td>Annual</td>
+                                        <td>2 days</td>
+                                        <td>0.00$</td>
+                                        <td>aaaaaaaaaaaaaaa</td>
+                                        <td class="submit-status">Submitted</td>
+                                        </tr>
+                                        <tr>
+                                        <td>1111</td>
+                                        <td>Annual</td>
+                                        <td>2 days</td>
+                                        <td>0.00$</td>
+                                        <td>aaaaaaaaaaaaaaa</td>
+                                        <td class="submit-status">Submitted</td>
+                                        </tr>
+                                        <tr>
+                                        <td>1111</td>
+                                        <td>Annual</td>
+                                        <td>2 days</td>
+                                        <td>0.00$</td>
+                                        <td>aaaaaaaaaaaaaaa</td>
+                                        <td class="submit-status">Submitted</td>
+                                        </tr>
+                                        <tr>
+                                        <td>1111</td>
+                                        <td>Annual</td>
+                                        <td>2 days</td>
+                                        <td>0.00$</td>
+                                        <td>aaaaaaaaaaaaaaa</td>
+                                        <td class="submit-status">Submitted</td>
+                                        </tr>
+                                        <tr>
+                                        <td>1111</td>
+                                        <td>Annual</td>
+                                        <td>2 days</td>
+                                        <td>0.00$</td>
+                                        <td>aaaaaaaaaaaaaaa</td>
+                                        <td class="submit-status">Submitted</td>
+                                        </tr>
+                                        <tr>
+                                        <td>1111</td>
+                                        <td>Annual</td>
+                                        <td>2 days</td>
+                                        <td>0.00$</td>
+                                        <td>aaaaaaaaaaaaaaa</td>
+                                        <td class="submit-status">Submitted</td>
+                                        </tr>
+                                        <tr>
+                                        <td>1111</td>
+                                        <td>Annual</td>
+                                        <td>2 days</td>
+                                        <td>0.00$</td>
+                                        <td>aaaaaaaaaaaaaaa</td>
+                                        <td class="submit-status">Submitted</td>
+                                        </tr>
+                                        <tr>
+                                        <td>1111</td>
+                                        <td>Annual</td>
+                                        <td>2 days</td>
+                                        <td>0.00$</td>
+                                        <td>aaaaaaaaaaaaaaa</td>
+                                        <td class="submit-status">Submitted</td>
+                                        </tr>
+                                        <tr>
+                                        <td>1111</td>
+                                        <td>Annual</td>
+                                        <td>2 days</td>
+                                        <td>0.00$</td>
+                                        <td>aaaaaaaaaaaaaaa</td>
+                                        <td class="submit-status">Submitted</td>
+                                        </tr>
+                                    </tbody>
+                                    </table>
+                                </div>
+                                <nav aria-label="Page navigation">
+                                    <ul id="pagination1" class="pagination">
+                                    </ul>
+                                </nav>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="ot-tab-pane" role="tabpanel" aria-labelledby="ot-tab" tabindex="0">
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <div class="d-flex justify-content-between align-items-end py-3">
+                                    <p class="fs-5 fw-bold mb-0 text-gray-600">Overtime History</p>
+                                    <div class="filter-leave d-flex">
+                                        <button type="button" class="btn btn-primary me-3" data-bs-toggle="modal" data-bs-target="#assignOTModal">
+                                        Assign OT
+                                        </button>                           
+                                        <div class="position-relative">
+                                        <!-- <input class="select-date" type="text" id="flatpickr" placeholder="Filter by status"> -->
+                                        <select class="form-select" style="height: 100%; width: 200px;" aria-label="Default select example">
+                                            <option value="1" selected>All Status</option>
+                                            <option value="2">Approved</option>
+                                            <option value="3">Submitted</option>
+                                            <option value="4">Rejected</option>
+                                        </select>
+                                        </div>
+
+                                        <!-- Assign OT Modal -->
+                                        <div class="modal fade" id="assignOTModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="assignOTModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header align-items-start">
+                                                        <div class="title">
+                                                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Assign OT</h1>
+                                                            <p>You can assign OT to your employee</p>
+
+                                                        </div>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form action="">
+                                                            <div class="mb-3 select">
+                                                                <label for="emDepartment" class="form-label">Department</label>
+                                                                <select class="form-select select-gender" id="emDepartment" name="emDepartment" aria-label="Department Select">
+                                                                    <option selected value="Media">Media</option>
+                                                                    <option value="Development">Development</option>
+                                                                    
+                                                                </select>
+                                                            </div>
+                                                            <div class="mb-3 select">
+                                                                <label for="emOT" class="form-label">Employee</label>
+                                                                <select class="form-select select-gender" id="emOT" name="emOT" aria-label="Employee Select">
+                                                                    <option selected value="Phan Lyhor">Phan Lyhor</option>
+                                                                    <option value="Ravuth Panha">Ravuth Panha</option>
+                                                                    
+                                                                </select>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Understood</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="table-container my-3">
+                                <table id="OtTable" class="display mb-4" cellspacing="0" width="100%">
+                                    <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Start/End Hour</th>
+                                        <th>Overtime Hours</th>
+                                        <th>Status</th>
+                                        <th>Overtime Pay</th>
+                                        <th>Reason</th>
+                                        <th>Detail</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1111</td>
+                                        <td>6:00 PM - 10:00 PM</td>
+                                        <td>3 hours</td>
+                                        <td><span class="overtime-status submit">Submitted</span></td>
+                                        <td>0.00$</td>
+                                        <td>Annual</td>
+                                        <td class=""><button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                                            data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1111</td>
+                                        <td>6:00 PM - 10:00 PM</td>
+                                        <td>3 hours</td>
+                                        <td><span class="overtime-status">Approved</span></td>
+                                        <td>10.00$</td>
+                                        <td>Annual</td>
+                                        <td class=""><button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                                            data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1111</td>
+                                        <td>6:00 PM - 10:00 PM</td>
+                                        <td>3 hours</td>
+                                        <td><span class="overtime-status reject">Rejected</span></td>
+                                        <td>0.00$</td>
+                                        <td>Annual</td>
+                                        <td class=""><button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                                            data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1111</td>
+                                        <td>6:00 PM - 10:00 PM</td>
+                                        <td>3 hours</td>
+                                        <td><span class="overtime-status reject">Rejected</span></td>
+                                        <td>0.00$</td>
+                                        <td>Annual</td>
+                                        <td class=""><button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                                            data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1111</td>
+                                        <td>6:00 PM - 10:00 PM</td>
+                                        <td>3 hours</td>
+                                        <td><span class="overtime-status reject">Rejected</span></td>
+                                        <td>0.00$</td>
+                                        <td>Annual</td>
+                                        <td class=""><button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                                            data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1111</td>
+                                        <td>6:00 PM - 10:00 PM</td>
+                                        <td>3 hours</td>
+                                        <td><span class="overtime-status reject">Rejected</span></td>
+                                        <td>0.00$</td>
+                                        <td>Annual</td>
+                                        <td class=""><button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                                            data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1111</td>
+                                        <td>6:00 PM - 10:00 PM</td>
+                                        <td>3 hours</td>
+                                        <td><span class="overtime-status reject">Rejected</span></td>
+                                        <td>0.00$</td>
+                                        <td>Annual</td>
+                                        <td class=""><button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                                            data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1111</td>
+                                        <td>6:00 PM - 10:00 PM</td>
+                                        <td>3 hours</td>
+                                        <td><span class="overtime-status reject">Rejected</span></td>
+                                        <td>0.00$</td>
+                                        <td>Annual</td>
+                                        <td class=""><button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                                            data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1111</td>
+                                        <td>6:00 PM - 10:00 PM</td>
+                                        <td>3 hours</td>
+                                        <td><span class="overtime-status reject">Rejected</span></td>
+                                        <td>0.00$</td>
+                                        <td>Annual</td>
+                                        <td class=""><button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                                            data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1111</td>
+                                        <td>6:00 PM - 10:00 PM</td>
+                                        <td>3 hours</td>
+                                        <td><span class="overtime-status reject">Rejected</span></td>
+                                        <td>0.00$</td>
+                                        <td>Annual</td>
+                                        <td class=""><button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                                            data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1111</td>
+                                        <td>6:00 PM - 10:00 PM</td>
+                                        <td>3 hours</td>
+                                        <td><span class="overtime-status reject">Rejected</span></td>
+                                        <td>0.00$</td>
+                                        <td>Annual</td>
+                                        <td class=""><button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                                            data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1111</td>
+                                        <td>6:00 PM - 10:00 PM</td>
+                                        <td>3 hours</td>
+                                        <td><span class="overtime-status reject">Rejected</span></td>
+                                        <td>0.00$</td>
+                                        <td>Annual</td>
+                                        <td class=""><button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                                            data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1111</td>
+                                        <td>6:00 PM - 10:00 PM</td>
+                                        <td>3 hours</td>
+                                        <td><span class="overtime-status reject">Rejected</span></td>
+                                        <td>0.00$</td>
+                                        <td>Annual</td>
+                                        <td class=""><button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                                            data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1111</td>
+                                        <td>6:00 PM - 10:00 PM</td>
+                                        <td>3 hours</td>
+                                        <td><span class="overtime-status reject">Rejected</span></td>
+                                        <td>0.00$</td>
+                                        <td>Annual</td>
+                                        <td class=""><button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                                            data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1111</td>
+                                        <td>6:00 PM - 10:00 PM</td>
+                                        <td>3 hours</td>
+                                        <td><span class="overtime-status reject">Rejected</span></td>
+                                        <td>0.00$</td>
+                                        <td>Annual</td>
+                                        <td class=""><button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                                            data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1111</td>
+                                        <td>6:00 PM - 10:00 PM</td>
+                                        <td>3 hours</td>
+                                        <td><span class="overtime-status reject">Rejected</span></td>
+                                        <td>0.00$</td>
+                                        <td>Annual</td>
+                                        <td class=""><button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                                            data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1111</td>
+                                        <td>6:00 PM - 10:00 PM</td>
+                                        <td>3 hours</td>
+                                        <td><span class="overtime-status reject">Rejected</span></td>
+                                        <td>0.00$</td>
+                                        <td>Annual</td>
+                                        <td class=""><button class="btn btn-link-primary info-btn" data-bs-toggle="modal"
+                                            data-bs-target="#otdetail"><i class="fa-duotone fa-regular fa-circle-info"></i></button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                                <nav aria-label="Page navigation">
+                                <ul id="pagination2" class="pagination">
+                                </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payroll Tabpane -->
+            <div class="tab-pane" id="pills-payroll" role="tabpanel" aria-labelledby="payroll-tab" tabindex="0">
+                <div id="payroll">
+                    <div class="w-100 d-flex justify-content-end mb-4">
+                        <div class="date-nav d-inline-flex align-items-center gap-3">
+                            <button class="btn btn-link text-dark p-0 filter-btn" aria-label="Previous day">
+                                <i class="fa-solid fa-angles-left text-warning"></i>
+                            </button>
+                            <div>
+                                <i class="fa-regular fa-calendar-days"></i>
+                                <button type="button" id="datePickerBtn" class="btn date-text fs-18-bold">October 2025</button>
+                            </div>
+                            <button class="btn btn-link text-dark p-0 filter-btn" aria-label="Next day">
+                                <i class="fa-solid fa-angles-right text-warning"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <table id="salaryTable" class="display">
+                            <thead>
+                                <tr>
+                                    <th id="monthYearsHeader" style="cursor: pointer;" class="d-flex align-items-center">
+                                        <i class="fa-solid fa-sort"></i>
+                                        <span>Month/Years</span>
+                                    </th>
+                                    <th>Base Salary</th>
+                                    <th>Deduction</th>
+                                    <th>13th salary</th>
+                                    <th>Tax</th>
+                                    <th>Overtime</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Dec 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$150.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Oct 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Sep 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Aug 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Jul 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Jun 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>May 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Apr 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Mar 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Feb 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Jan 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>                                    
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nov 2023</td>
+                                    <td>$3.00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$00.00</td>
+                                    <td>$15.00</td>
+                                    <td>$550.00</td>
+                                    <td>$550.00</td>
+                                    <td><span class="status-paid">Paid</span></td>
+                                </tr>
+                                <!-- Add more rows as needed -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <nav aria-label="Page navigation">
+                        <ul id="pagination" class="pagination">
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Document Tabpane -->
+            <div class="tab-pane" id="pills-document" role="tabpanel" aria-labelledby="document-tab" tabindex="0">
+                <div id="document"> 
+                    <!-- Main Document List -->
+                    <div class="document-list">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h5 class="h5 fw-bold mb-0">Document</h5>
+                            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addDocumentModal">
+                                Add Document
+                            </button>
+                        </div>
+                        <hr>
+                        <p class="fw-bold mb-2">Contact</p>
+                        <div class="document-item d-flex justify-content-between align-items-center">
+                            <p class="fs-18-bold text-primary">Cv.pdf</p>
+                            <div>
+                                <button class="btn btn-link p-0 me-2" data-bs-toggle="modal" data-bs-target="#updateDocumentModal">
+                                    <i class="fa-regular fa-pen-to-square h5 text-warning pb-0 mb-0"></i>
+                                </button>
+                                <button class="btn btn-link p-0 delete-btn">
+                                    <i class="fa-regular fa-trash-can h5 text-danger pb-0 mb-0"></i>
+                                </button>                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add Document Modal -->
+                    <div class="modal fade" id="addDocumentModal" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <p class="modal-title h4 fw-bold">Add Document</p>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <p class=" fs-16">Document Description:</p>
+                                            <input type="text" class="form-control mt-2" placeholder="Contract">
+                                        </div>
+                                        <div class="mb-3">
+                                            <p class="fs-16">Upload File:</p>
+                                            <label for="fileInput" class="upload-area w-100 mt-2">
+                                                <input type="file" id="fileInput" class="d-none">
+                                                <div class="upload-icon">☁️</div>
+                                                <p class="mb-0">Drag & drop to upload</p>
+                                                <p class="text-primary mb-0">or browse</p>
+                                            </label>                                                                              
+                                        </div>
+                                        <div class="text-end">
+                                            <button type="button" class="btn btn-secondary me-2 px-4" data-bs-dismiss="modal">Cancel</button>
+                                            <button type="submit" class="btn btn-primary px-4">Save</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Update Document Modal -->
+                    <div class="modal fade" id="updateDocumentModal" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <p class="modal-title h4 fw-bold">Update Document</p>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <p class=" fs-16">Document Description:</p>
+                                            <input type="text" class="form-control mt-2" placeholder="Contract">
+                                        </div>
+                                        <div class="mb-3">
+                                            <p class="fs-16">Upload File:</p>
+                                            <label for="fileInput" class="upload-area w-100 mt-2">
+                                                <input type="file" id="fileInput" class="d-none">
+                                                <div class="upload-icon">☁️</div>
+                                                <p class="mb-0">Drag & drop to upload</p>
+                                                <p class="text-primary mb-0">or browse</p>
+                                            </label>                                                                              
+                                        </div>
+                                        <div class="text-end">
+                                            <button type="button" class="btn btn-secondary me-2 px-4" data-bs-dismiss="modal">Cancel</button>
+                                            <button type="submit" class="btn btn-primary px-4">Save</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script src="assets/js/emManagement.js"></script>

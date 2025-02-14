@@ -1,0 +1,105 @@
+<!-- ```views/partials/sidebar.ejs -->
+<nav class="sidebar" id="sidebar">
+    <ul class="nav w-100 h-100">
+        <div class="nav-section pt-1 w-100">
+            <!-- HR nav -->
+            <div class="hr-nav flex-column">
+                <li class="nav-item nav-item-title fw-bold text-primary pb-3">Management</li>
+                <li class="nav-item">
+                    <a href="/admindashboard" class="nav-link <%= sidebarActivePage === 'Admin Dashboard' ? 'active' : '' %>">
+                        <span class="fs-5 pe-3 sidebar-icon"><i class="fa-duotone fa-solid fa-chart-simple"></i></span>
+                        <p class="text-start">Dashboard</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/employee" class="nav-link <%= sidebarActivePage === 'Employee Management' ? 'active' : '' %>">
+                        <span class="fs-5 sidebar-icon"><i class="fa-duotone fa-solid fa-users"></i></span>
+                        <p class="text-start">Employees</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/attendancemanagement" class="nav-link <%= sidebarActivePage === 'Attendance Management' ? 'active' : '' %>">
+                        <span class="fs-5 pe-3 sidebar-icon"><i class="fa-duotone fa-solid fa-calendar-star"></i>
+                        </span>
+                        <p class="text-start">Attendance</p>
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/getRequest" class="nav-link <%= sidebarActivePage === 'Request Management' ? 'active' : '' %>">
+                        <span class="fs-5 pe-3 sidebar-icon"><i class="fa-duotone fa-solid fa-inbox-full"></i></span>
+                        <p class="text-start">Requests</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="payrollmanagement" class="nav-link <%= sidebarActivePage === 'Payroll Management' ? 'active' : '' %>">
+                        <span class="fs-5 pe-3 sidebar-icon"><i class="fa-duotone fa-solid fa-envelope-open-dollar"></i></span>
+                        <p class="text-start">Payroll</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/company" class="nav-link <%= sidebarActivePage === 'Company Management' ? 'active' : '' %>">
+                        <span class="fs-5 sidebar-icon"><i class="fa-duotone fa-regular fa-building-circle-check"></i></span>
+                        
+                        <p class="text-start">Company</p>
+                    </a>
+                </li>
+            </div>
+
+            <!-- staff-nav -->
+            <div class="staff-nav flex-column">
+                <li class="nav-item nav-item-title fw-bold text-primary pb-3">Personal</li>
+                <li class="nav-item">
+                    <a href="/staffdashboard" class="nav-link <%= sidebarActivePage === 'Dashboard' ? 'active' : '' %>">
+                        <span class="fs-5 sidebar-icon"><i class="fa-duotone fa-solid fa-chart-mixed"></i></span>                      
+                        <p class="text-start">Home</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/staffattendance" class="nav-link <%= sidebarActivePage === 'Attendance' ? 'active' : '' %>">
+                        <span class="fs-5 sidebar-icon"><i class="fa-duotone fa-solid fa-calendar-range"></i></span>                      
+                        <p class="text-start">Attendance</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/staffRequest" class="nav-link <%= sidebarActivePage === 'Request' ? 'active' : '' %>">
+                        <span class="fs-5 sidebar-icon"><i class="fa-duotone fa-solid fa-paper-plane-top"></i></span> 
+                        
+                        <p class="text-start">Requests</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/payroll" class="nav-link <%= sidebarActivePage === 'Payroll' ? 'active' : '' %>">
+                        <span class="fs-5 sidebar-icon"><i class="fa-duotone fa-solid fa-circle-dollar-to-slot"></i></span> 
+                       
+                        <p class="text-start">Payroll</p>
+                    </a>
+                </li>
+            </div>
+
+            <!-- company -->
+            <!-- <div class="company-nav">
+                <li class="nav-item fw-bold text-primary pb-3">Company</li>
+                
+            </div> -->
+        </div>
+
+        <!-- Profile Section -->
+        <div class="profile-section w-100">
+            <li class="nav-item">
+                <a href="/profile" class="nav-link <%= sidebarActivePage === 'Profile' ? 'active' : '' %>">
+                    <span class="sidebar-icon fs-5"><i class="fa-duotone fa-solid fa-user"></i></span>                
+                    <!-- <img src="upload/plyheng.jpg" alt="Profile" class="profile-img"> -->
+                    <p>Account</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/lougout" class="nav-link logout-link">
+                    <span class="sidebar-icon fs-5"><i class="fa-duotone fa-solid fa-right-from-bracket"></i></span>
+                    
+                    <p>Logout</p>
+                </a>
+            </li>
+        </div>
+    </ul>
+</nav>
